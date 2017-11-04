@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="_item">物品</string>
+    <string name="_shop">商店</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">火星英雄蛋</string>
+    <string name="circle_width">128dp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="icon_width">40</string>
+    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_battle">BattleActivity</string>
+    <string name="title_activity_file">在线关卡</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_stagechoosser">关卡选择</string>
+    <style name="AnimationFade">
+
+        <!-- PopupWindow左右弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/selfin</item>
+        <item name="android:windowExitAnimation">@anim/selfout</item>
+    </style>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    <style name="Widget.SeekBar.directionSeekBarStyle" parent="@android:style/Widget.SeekBar">  
+        <item name="android:maxHeight">48.0dip</item>  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>  
+        <item name="android:progressDrawable">@drawable/seekhor</item>  
+        <item name="android:minHeight">10.0dip</item>  
+        <item name="android:thumbOffset">16.0dip</item>  
+    </style>
+    <style name="Widget.SeekBar.jumpSeekBarStyle" parent="@android:style/Widget.SeekBar">  
+        <item name="android:maxHeight">48.0dip</item>  
+        <item name="android:indeterminateOnly">false</item>  
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>  
+        <item name="android:progressDrawable">@layout/jumpseekdrawable</item>  
+        <item name="android:minHeight">10.0dip</item>  
+        <item name="android:thumbOffset">16.0dip</item>  
+    </style>
+    <style name="bizhiTheme" parent="android:Theme.Wallpaper">
+
+        <!-- windowNoTitle设置为true，去掉标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="gamesucceedRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@layout/ratingbar_drawable_gamesucceed</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+    <style name="myDialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 更换背景图片实现全透明 -->
+       <item name="android:windowBackground">@drawable/blank</item>
+        <!-- 屏幕背景不变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 隐藏标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="stagechooserRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@layout/ratingbar_drawable_stagechooser</item>
+        <item name="android:minHeight">32dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+    <style name="toumingDialog" parent="@android:style/Theme.Dialog">
+
+        <!-- 更换背景图片实现全透明 -->
+      <item name="android:windowBackground">@drawable/touming</item> 
+        <!-- 屏幕背景不变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 隐藏标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

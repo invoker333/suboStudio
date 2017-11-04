@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_default.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\bg_default.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\yellow.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\yellow.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\white.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\white.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\seekhor.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\seekhor.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\greenstroke.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\greenstroke.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\whitestroke.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\whitestroke.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\qingse.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\qingse.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_pressed.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\bg_pressed.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\touming.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\touming.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\star1.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\star1.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\orange.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\orange.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\purple.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\purple.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\greenrect.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\greenrect.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\biankaungorange.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\biankaungorange.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_button.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\bg_button.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\bg_selected.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\bg_selected.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\pink.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable-hdpi\\pink.xml"
+    }
+]

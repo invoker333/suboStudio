@@ -1,0 +1,254 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\cannotforget.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\cannotforget.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gore.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gore.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\hedgehog.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\hedgehog.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gunlight.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gunlight.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\boomshot.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\boomshot.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\lifewater.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\lifewater.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\land.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\land.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\sword.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\sword.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\jumpsoft.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\jumpsoft.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\juji.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\juji.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\shop.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\shop.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\walker.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\walker.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\bubble.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\bubble.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\baller.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\baller.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\jump.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\jump.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\zhizhu.mp3",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\zhizhu.mp3"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\jump3.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\jump3.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\crepper6.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\crepper6.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\death.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\death.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\lightning.mp3",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\lightning.mp3"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\creeper.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\creeper.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\fresh.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\fresh.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\silence.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\silence.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\victory.mp3",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\victory.mp3"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gameover.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gameover.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\juji2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\juji2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\laser.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\laser.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\flyer.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\flyer.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gamestart.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gamestart.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\firecolumn.mp3",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\firecolumn.mp3"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\happyness.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\happyness.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\shotgun.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\shotgun.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\bird.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\bird.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\creeper4.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\creeper4.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\bocai.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\bocai.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\step.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\step.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\maiji.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\maiji.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\flyer2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\flyer2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\creeper2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\creeper2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\snowtown.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\snowtown.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\magic.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\magic.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\emplacement.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\emplacement.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\paopaotang2.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\paopaotang2.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\bolailuo.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\bolailuo.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gun3.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gun3.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\kill2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\kill2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\wood2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\wood2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\kill.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\kill.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\fog.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\fog.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\goal.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\goal.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gun2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gun2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\jump2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\jump2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\vehicle.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\vehicle.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\finalcoin.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\finalcoin.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\coin.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\coin.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\brake01.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\brake01.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\creeper3.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\creeper3.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\missile.mp3",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\missile.mp3"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\bomb2.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\bomb2.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\friend.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\friend.mid"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\gun.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\gun.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\juji3.wav",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\juji3.wav"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\raw\\friend2.mid",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\raw\\friend2.mid"
+    }
+]

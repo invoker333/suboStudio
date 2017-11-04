@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\fadein.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\fadein.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\selfout.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\selfout.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\out.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\out.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\selfin.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\selfin.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\in.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\in.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\anim\\fadeout.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\anim\\fadeout.xml"
+    }
+]

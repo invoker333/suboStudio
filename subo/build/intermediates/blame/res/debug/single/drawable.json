@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\lock.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\lock.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\file_icon.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\file_icon.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\clock.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\clock.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\next.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\next.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\egg.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\egg.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\coinicon.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\coinicon.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\eraser.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\eraser.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\selected.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\selected.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\button_thumb.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\button_thumb.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\ride2.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\ride2.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\score.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\score.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\jump.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\jump.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\tomenu2.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\tomenu2.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\osguide.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\osguide.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\direction.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\direction.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\pause1.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\pause1.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\button_attack1.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\button_attack1.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\stageitem.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\stageitem.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\pause.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\pause.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\retry.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\retry.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\cap.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\cap.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\close.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\close.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\button_attack.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\button_attack.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\guiderect.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\guiderect.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\soilgrass.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\soilgrass.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\unselected.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\unselected.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\ride.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\ride.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\blank.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\blank.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\tomenu.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\tomenu.png"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\drawable\\back.png",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\drawable\\back.png"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\menu\\battle.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\menu\\battle.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\menu\\file.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\menu\\file.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\menu\\stagechoosser.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\menu\\stagechoosser.xml"
+    }
+]

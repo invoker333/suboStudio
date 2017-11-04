@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.antfortune.freeline'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.mingli.toms"
+        minSdkVersion 14
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':unZip')
+    compile files('libs/android-support-v13.jar')
+    compile files('libs/baidu_cuid.jar')
+    compile files('libs/BaiduAppX_V2.4.0_20160317.jar')
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

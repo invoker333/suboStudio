@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\xml\\aaa.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\xml\\aaa.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\xml\\pref_data_sync.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\xml\\pref_data_sync.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\xml\\pref_notification.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\xml\\pref_notification.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "E:\\AndroidStudioProjects11\\subo1\\subo\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "E:\\AndroidStudioProjects11\\subo1\\subo\\src\\main\\res\\xml\\pref_general.xml"
+    }
+]
