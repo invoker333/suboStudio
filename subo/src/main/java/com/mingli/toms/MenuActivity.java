@@ -246,6 +246,7 @@ public class MenuActivity extends Activity {
 			case 0:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
 			case 1:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
 			case 2:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
+			case 3:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
 
 		}
 	}

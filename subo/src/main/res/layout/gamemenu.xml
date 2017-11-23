@@ -311,41 +311,43 @@
 
         <Button
             android:id="@+id/savemap"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/orange"
             android:text=" 保存地图 "
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            />
 
         <RelativeLayout
             android:id="@+id/buyLife"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
             android:layout_margin="3dp"
-            android:background="@drawable/orange"
+            android:background="@drawable/whitestroke"
 
             android:padding="3dp">
 
-            <Button
+            <TextView
                 android:id="@+id/button1"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_margin="10dp"
-                android:background="@drawable/greenrect"
+                android:textSize="18dp"
+                android:textColor="#ffff5500"
+                android:gravity="center"
                 android:text="买活" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_below="@+id/button1"
+                android:background="@drawable/orange"
                 android:orientation="horizontal">
 
                 <RelativeLayout
                     android:id="@+id/chancecostlayout"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
 
                     android:layout_weight="0.5"
@@ -362,7 +364,6 @@
                         android:layout_toRightOf="@+id/View01"
                         android:gravity="center"
                         android:text="50"
-                        android:textColor="#ffffff"
                         android:textSize="12sp" />
 
                     <View
@@ -376,7 +377,7 @@
 
                 <RelativeLayout
                     android:id="@+id/goodscostlayout"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5">
 
@@ -391,7 +392,6 @@
                         android:layout_toRightOf="@+id/view2"
                         android:gravity="center"
                         android:text="50"
-                        android:textColor="#ffffff"
                         android:textSize="12sp" />
 
                     <View

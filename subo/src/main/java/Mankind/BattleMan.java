@@ -47,9 +47,14 @@ public class BattleMan extends JointCreature{
 	  boolean doubleClicked;
 		private Pifeng pifeng;
 		Tail footTail;
-	boolean sitDown;//是否趴下
+	boolean sitDownLand;//是否趴下
+	boolean sitDownAir;//是否趴下 kongzhong
+	 boolean downActionMoved;
+	boolean upActionMoved;
+	boolean leftActionMoved;
+	boolean rightActionMoved;
 
-	  protected void initEffect(float x, float y) {
+	protected void initEffect(float x, float y) {
 		  DEATHSPEED=super.DEATHSPEED/2;
 
 
@@ -234,7 +239,7 @@ public class BattleMan extends JointCreature{
                 // e.setVt(e.getVt() + ySpe/20f);
                 e.setxSpeed(e.getxSpeed() + goreAni.getxSpeed());
                 e.setySpeed(e.getySpeed() + goreAni.getySpeed());
-                e.attacked((int) (10 * goreAni.getySpeed()));
+                e.attacked((int) Math.abs((10 * goreAni.getySpeed())));
             }
 
         }
@@ -290,7 +295,7 @@ public class BattleMan extends JointCreature{
 	                x1 = getMx1();
 	                goreId = getLandId();
 	            }
-	            if (gaoTime>0&&downData[5]) {
+	            if (gaoTime>0&&downActionMoved) {
 	                boolean destoryed=destory(goreId, x1, getMy1());//���ƻ� Ҫ��Ȼש��᲻��ʧ
 	              if(destoryed) {
 	            	  setySpeed((float) -Math.sqrt(Math.pow(ySpeed, 2) - E));//��������ʧ
@@ -403,7 +408,7 @@ public class BattleMan extends JointCreature{
     public void drawElement(GL10 gl) {
     	drawEffect(gl);
 
-        if(downData[5]
+        if(downActionMoved
 //     		   &&gaoTime>0
      		   ){
      	   footTail.tringer(x, y-getH());

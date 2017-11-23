@@ -1,5 +1,7 @@
 package Weapon;
 
+import com.mingli.toms.World;
+
 import java.util.ArrayList;
 
 import javax.microedition.khronos.opengles.GL10;
@@ -9,9 +11,6 @@ import Enviroments.GrassSet;
 import Mankind.Creature;
 import Mankind.EnemySet;
 import Mankind.Player;
-
-import com.mingli.toms.World;
-
 import element2.TexId;
 
 public class Bullet extends AnimationMove{
@@ -50,8 +49,10 @@ public class Bullet extends AnimationMove{
 	}
 
 	public void drawElement(GL10 gl) {
-		super.drawElement(gl);
-		shot();
+		if(fire){
+			super.drawElement(gl);
+			shot();
+		}
 	}
 
 	void shot() {

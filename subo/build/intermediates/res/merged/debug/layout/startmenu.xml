@@ -300,6 +300,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/fileChoose"
+        android:background="@drawable/greenrect"
         android:layout_alignTop="@+id/fileChoose" />
 
     <TextView
@@ -307,6 +308,7 @@
         android:layout_height="wrap_content"
         android:text="谁来冒险"
         android:layout_toRightOf="@+id/fileChoose"
+        android:background="@drawable/white"
         android:layout_above="@+id/heroSelectSpinner" />
 
 </RelativeLayout>

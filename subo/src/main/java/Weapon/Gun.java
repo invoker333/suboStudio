@@ -11,6 +11,7 @@ import javax.microedition.khronos.opengles.GL10;
 import Enviroments.GrassSet;
 import Mankind.Creature;
 import Mankind.EnemySet;
+import Module.TexIdAndBitMap;
 import element2.Set;
 import element2.TexId;
 
@@ -37,12 +38,18 @@ public class Gun extends Set {// 子弹
 	public Gun(EnemySet es,GrassSet gra,Creature c, int bCount) {
 		this.enemySet = es;
 		this.gra = gra;
-		this.sList = es.cList;// 着弹对象
+		if(es!=null)
+			this.sList = es.cList;// 着弹对象
 		this.player = c;
 		setBullet(bCount);
 		// ps=new ParticleSet(gra, count);
 	}
-
+	public void setBulletTextureId(TexIdAndBitMap tb){
+		if(bList!=null)
+		for(Bullet b:bList){
+			b.setTextureId(tb);
+		}
+	}
 
 	protected void setBullet(int bCount) {
 		bList = new ArrayList<Bullet>();
@@ -153,7 +160,6 @@ public class Gun extends Set {// 子弹
 
 	public void drawElement(GL10 gl) {
 		for (int i = 0; i < bList.size(); i++) {
-			if(bList.get(i).isFire())
 			bList.get(i).drawElement(gl);
 		}
 	}

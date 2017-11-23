@@ -171,17 +171,21 @@ public class Blade extends Joint {
 		if (getAngle() > angleStart) {
 			stop();
 		} else if (getAngle() < angleEnd) {
-			// setDagree(- getDagree()/2);
-			player.setAnimationFinished(true);// holder can translate body
-			setDagree(0);
-//			angleA = angleAMax / 2;
-			angleA = angleAMax / 5 ;
-//			angleA = angleAMax / 25 ;
-			
-			setAngle(angleEnd %360);
-
-			targetCheck();
+			gotEnd();
 		}
+	}
+
+	protected void gotEnd() {
+		// setDagree(- getDagree()/2);
+		player.setAnimationFinished(true);// holder can translate body
+		setDagree(0);
+//			angleA = angleAMax / 2;
+		angleA = angleAMax / 5 ;
+//			angleA = angleAMax / 25 ;
+
+		setAngle(angleEnd %360);
+
+		targetCheck();
 	}
 
 	public void attack(int direc) {

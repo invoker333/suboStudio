@@ -1,12 +1,11 @@
 package Mankind;
 
+import com.mingli.toms.MusicId;
+
 import javax.microedition.khronos.opengles.GL10;
 
 import Enviroments.GrassSet;
 import Weapon.BoomBullet;
-
-import com.mingli.toms.MusicId;
-
 import element2.TexId;
 
 public class Flyer extends Enemy {
@@ -34,6 +33,7 @@ public class Flyer extends Enemy {
 //		b.loadTexture(TexId.GREEN);
 		b=new BoomBullet(enemySet, gra);
 		b.loadTexture(TexId.EGG);
+		b.boomA.setTextureId(TexId.BOOMWHITE);
 		// b.speed=20;
 	}
 	public void drawElement(GL10 gl){

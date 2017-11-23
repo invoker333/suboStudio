@@ -12,11 +12,12 @@ import element2.TexId;
 
 public class PlayerBlader extends Player {
 	private boolean rotateBlade;
+	private float standHeightEdge;
 
 	public PlayerBlader(char mapSign, GrassSet gra, World world, float x, float y) {
 		super(mapSign, gra, world, x, y);
 		drawAngleSpeed=18f;
-		cap.setTextureId(TexId.HEDGEHOG);
+		cap.setTextureId(TexId.REDCREEPER);
 		realBlade=new Blade(this,realBlade.getEs()){
 			final int frameTime=2;//美珍走几次
 			public void tailTringer() {
@@ -27,14 +28,6 @@ public class PlayerBlader extends Player {
 					super.incAngle();
 					super.tailTringer();
 				}// angle+=frameTime-1  but tailTrange =frameTime
-			}
-			public void incAngle() {
-				float angleAgo=this.angle;
-				super.incAngle();
-				if(angleAgo%360> angleEnd&&angle<angle){
-					blade.playSound();
-					targetCheck();//
-				}
 			}
 
 			protected void angleGotTargetCheck(double dx, double dy, Creature spi) {
@@ -58,13 +51,43 @@ public class PlayerBlader extends Player {
 
 		baseGunLength=32;
 	}
+	public void reLife(int time){
+		super.reLife(time);
+		haveBlade();
+	}
 	public void jump(float rate){
 		super.jump(rate);
-		if(rate>0.33)rotateBlade=true;
+		if(rate>0.33){
+			rotateBlade=true;
+			if (gethEdge() > getwEdge()) {
+				standHeightEdge = gethEdge();
+				sethEdge(getwEdge());
+			}
+			else if (gethEdge() < getwEdge()) {
+				standHeightEdge = getwEdge();
+				setwEdge(gethEdge());
+			}
+		}
+	}
+	public boolean isAnimationFinished(){
+		if(!fallen)return false;
+		return super.isAnimationFinished();
 	}
 	protected void tooDown() {
 		super.tooDown();
-		rotateBlade=false;
+		if(rotateBlade){
+			rotateBlade=false;
+			sethEdge(standHeightEdge);
+			y=yPro+=gethEdge()-getwEdge();
+		}
+	}
+	public void changeSize(float rate){
+		if(rotateBlade) {
+//			rotateBlade = false;
+			sethEdge(standHeightEdge);
+//			 y = yPro += gethEdge() - getwEdge();
+		}
+		super.changeSize(rate);
 	}
 	protected void gunAngleAndCdCheck() {
 		// TODO Auto-generated method stub
@@ -99,7 +122,7 @@ public class PlayerBlader extends Player {
 
 	public void drawElement(GL10 gl) {
 
-		if(fallen){//角度回归
+		if(fallen&&!sitDownLand){//角度回归
 			{
 				angle=angle%360;
 				if(angle<-90)angle=360+angle;// >90 continue roll
@@ -110,8 +133,17 @@ public class PlayerBlader extends Player {
 
 		}
 		else {
-			if(rotateBlade)
+			if(rotateBlade){
+				float angleAgo=angle;
+
 				angle-=drawAngleSpeed;
+
+				if(blade==realBlade&&angleAgo%360>realBlade.angleEnd&&angle%360<realBlade.angleEnd){
+
+					realBlade.targetCheck();
+					realBlade.playSound();
+				}
+			}
 		}
 
 		if (isDoubleClicked()) shader.drawElement(gl);//影子

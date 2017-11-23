@@ -41,6 +41,7 @@ public class Creature extends AnimationGrass {
 	 ArrayList<Creature> enemyList;
 	
 	public boolean isDead;// 死亡与否
+	private boolean hero;// hero or not
 
 	public Creature(GrassSet gra) {
 		super(gra);
@@ -679,6 +680,10 @@ public class Creature extends AnimationGrass {
 	public void drawEffect(GL10 gl) {
 		// TODO Auto-generated method stub
 		// draw thing when not in screen
+	}
+
+	 void toBeHero() {
+		 hero=true;
 	}
 	
 }

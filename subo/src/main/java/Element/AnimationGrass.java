@@ -90,34 +90,42 @@ public class AnimationGrass extends AnimationMove {
 		edge = xPro - wEdge;
 		edge2 = xPro + wEdge;
 		if (getySpeed() > 0) {
-			if ((mx1 = (int) (edge / gra.getGrid())) >= 0
-					&& (mx2 = (int) (edge2 / gra.getGrid())) < gra.getMapWidth()) {
-				if ((my1 = (int) ((yPro + gethEdge()) / gra.getGrid())) < gra
-						.getMapHeight() && my1 >= 0)
-					while (mx1 <= mx2) {
-						if (gra.map[mx1][my1] != gra.getZero()) {
-							if(upCheck(gra.map[mx1][my1]))
-							break;
-						}
-						mx1++;
-					}
-			}
+			upWallCheck();
 		} else if (getySpeed() < 0) {
-			if ((mx1 = (int) (edge / gra.getGrid())) >= 0
-					&& (mx2 = (int) (edge2 / gra.getGrid())) < gra.getMapWidth()) {
-				if ((my1 = (int) ((yPro - gethEdge()) / gra.getGrid())) < gra
-						.getMapHeight() && my1 >= 0)
-					while (mx1 <= mx2) {
-						if (gra.map[mx1][my1] != gra.getZero()) {
-//							downCheck(mx1,my1);
-							if(downCheck(gra.map[mx1][my1])){
-							break;
-							}
-						}
-						mx1++;
-					}
-			}
+			downWallCheck();
 		}
+	}
+
+	private void downWallCheck() {
+		if ((mx1 = (int) (edge / gra.getGrid())) >= 0
+                && (mx2 = (int) (edge2 / gra.getGrid())) < gra.getMapWidth()) {
+            if ((my1 = (int) ((yPro - gethEdge()) / gra.getGrid())) < gra
+                    .getMapHeight() && my1 >= 0)
+                while (mx1 <= mx2) {
+                    if (gra.map[mx1][my1] != gra.getZero()) {
+//							downCheck(mx1,my1);
+                        if(downCheck(gra.map[mx1][my1])){
+                        break;
+                        }
+                    }
+                    mx1++;
+                }
+        }
+	}
+
+	private void upWallCheck() {
+		if ((mx1 = (int) (edge / gra.getGrid())) >= 0
+                && (mx2 = (int) (edge2 / gra.getGrid())) < gra.getMapWidth()) {
+            if ((my1 = (int) ((yPro + gethEdge()) / gra.getGrid())) < gra
+                    .getMapHeight() && my1 >= 0)
+                while (mx1 <= mx2) {
+                    if (gra.map[mx1][my1] != gra.getZero()) {
+                        if(upCheck(gra.map[mx1][my1]))
+                        break;
+                    }
+                    mx1++;
+                }
+        }
 	}
 
 	protected void downCheck1(int mx1, int my1) {
@@ -129,36 +137,44 @@ public class AnimationGrass extends AnimationMove {
 		edge = y - gethEdge();
 		edge2 = y + gethEdge();
 		if (getxSpeed() < 0) {
-			if ((my1 = (int) (edge / gra.getGrid())) >= 0
-					&& (my2 = (int) (edge2 / gra.getGrid())) < gra
-							.getMapHeight()) {
-				if ((mx1 = (int) ((xPro - wEdge) / gra.getGrid())) < gra
-						.getMapWidth() && mx1 >= 0)// 不能越界
-					while (my1 <= my2) {
-						if (gra.map[mx1][my1] != gra.getZero()) {
-							if(leftCheck(gra.map[mx1][my1]))
-							break;
-						}
-						my1++;
-					}
-			}
+			leftWallCheck();
 		} else if (getxSpeed() > 0) {
-			if ((my1 = (int) (edge / gra.getGrid())) >= 0
-					&& (my2 = (int) (edge2 / gra.getGrid())) < gra
-							.getMapHeight()) {
-				if ((mx1 = (int) ((xPro + wEdge) / gra.getGrid())) < gra
-						.getMapWidth() && mx1 >= 0) {
-					while (my1 <= my2) {
-						if (gra.map[mx1][my1] != gra.getZero()) {
-							if(rightCheck(gra.map[mx1][my1]))
-							break;
-						}
-						my1++;
-					}
-				}
-			}
+			rightWallCheck();
 
 		}
+	}
+
+	private void rightWallCheck() {
+		if ((my1 = (int) (edge / gra.getGrid())) >= 0
+                && (my2 = (int) (edge2 / gra.getGrid())) < gra
+                        .getMapHeight()) {
+            if ((mx1 = (int) ((xPro + wEdge) / gra.getGrid())) < gra
+                    .getMapWidth() && mx1 >= 0) {
+                while (my1 <= my2) {
+                    if (gra.map[mx1][my1] != gra.getZero()) {
+                        if(rightCheck(gra.map[mx1][my1]))
+                        break;
+                    }
+                    my1++;
+                }
+            }
+        }
+	}
+
+	private void leftWallCheck() {
+		if ((my1 = (int) (edge / gra.getGrid())) >= 0
+                && (my2 = (int) (edge2 / gra.getGrid())) < gra
+                        .getMapHeight()) {
+            if ((mx1 = (int) ((xPro - wEdge) / gra.getGrid())) < gra
+                    .getMapWidth() && mx1 >= 0)// 不能越界
+                while (my1 <= my2) {
+                    if (gra.map[mx1][my1] != gra.getZero()) {
+                        if(leftCheck(gra.map[mx1][my1]))
+                        break;
+                    }
+                    my1++;
+                }
+        }
 	}
 
 	private boolean leftCheck(int i) {

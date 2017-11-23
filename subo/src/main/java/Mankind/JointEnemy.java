@@ -35,7 +35,9 @@ public class JointEnemy extends JointCreature{
 		return player;
 	}
 	public void setPlayerAndToBeBoss(Player player) {
+		toBeHero();
 		setLifeMax(50*World.baseAttack);
 		this.player = player;
 	}
+
 }

@@ -213,12 +213,11 @@ public class Player extends BattleMan {
             if(World.bigMode)if(testRate>0.5f)changeSize(testRate-=0.1f);///////
            if( turnDown()){}
            else {
-        	   downData[5]=true;
+        	   downActionMoved=true;
         	   downBody(true);
         	   footTail.startTouch(x, y);
         	   
-               if (controller.isJumpAble()) controller.jump(-vtDestory/getySpeedMax());
-               if (isJumpAble()) jump(-vtDestory+1);
+
            }
 
         }
@@ -227,25 +226,46 @@ public class Player extends BattleMan {
 			flyAble=false;//禁飞
 			downBody(false);
            if(World.bigMode)if(testRate<1.5f) changeSize(testRate+=0.1f);/////////
+
+			if(!sitDownLand){
+				if (controller.isJumpAble()) controller.jump(-vtDestory/getySpeedMax());
+				if (isJumpAble()) jump(-vtDestory+1);
+			}
         }
     }
 
 	private void downBody(boolean sitDown) {
-		this.sitDown =sitDown;
-		if(sitDown){
-			if(gethEdge()>getwEdge()){
-				float he = gethEdge();
-				sethEdge(getwEdge());
-				setwEdge(he);
-			}
+		if(fallen){
+			downBodyLand(sitDown);
+		}else downBodyAir(sitDown);
 
-		}else {
-			if(gethEdge()<getwEdge()){
-				float he = gethEdge();
-				sethEdge(getwEdge());
-				setwEdge(he);
-			}
-		}
+	}
+
+	private void downBodyAir(boolean sitDown) {
+		this.sitDownAir=sitDown;
+	}
+	public boolean isAnimationFinished(){
+		if(sitDownLand)return false;
+		return super.isAnimationFinished();
+	}
+	private void downBodyLand(boolean sitDown) {
+		this.sitDownLand =sitDown;
+		if(sitDown){
+            if(gethEdge()>getwEdge()){
+                float he = gethEdge();
+                sethEdge(getwEdge());
+                setwEdge(he);
+            }
+
+        }else {
+            if(gethEdge()<getwEdge()){
+                float he = gethEdge();
+                sethEdge(getwEdge());
+                setwEdge(he);
+
+				yPro=y+=gethEdge()-getwEdge()+1;
+            }
+        }
 	}
 
 	private void calcuPlayerSpeed(float x, float y) {
@@ -328,12 +348,20 @@ public class Player extends BattleMan {
     	if(flyAble)drawGuideTail(gl);	
     	super.drawElement(gl);
 
-		if(sitDown){
+		if(fallen)drawSitDownLand();
+		else drawSitDownAir();
+	}
+
+	 void drawSitDownAir() {
+	}
+
+	 void drawSitDownLand() {
+		if(sitDownLand){
 			if(angle>-90+drawAngleSpeed){
 				angle-=drawAngleSpeed;
 			}else if(angle<-90-drawAngleSpeed){
 				angle+=drawAngleSpeed;
-			}else angle=90;
+			}else angle=-90;
 		}else {
 			if(angle>drawAngleSpeed){
 				angle-=drawAngleSpeed;
@@ -341,8 +369,8 @@ public class Player extends BattleMan {
 				angle+=drawAngleSpeed;
 			}else angle=0;
 		}
-    }
-    
+	}
+
 	private void initGuideTail(GrassSet gra) {
 		// TODO Auto-generated method stub
     	guideTail=new Tail(60);
@@ -360,7 +388,7 @@ public class Player extends BattleMan {
 
 	protected void changeToLandData(){
     	super.changeToLandData();
-    	 downData[5]=false;// remove destory jump
+    	 downActionMoved=false;// remove destory jump
     }
     
    
@@ -409,14 +437,13 @@ public class Player extends BattleMan {
 
 
 	public void jump(float rate) {
+		downBody(false);
 
-		
 		world.sendMessage(World.JUMP);
 		if(doubleClicked)rate*=DOUBLE_JUMP_RATE;
 		super.jump(rate);
 		playSound(MusicId.land);
-		downBody(false);
-		
+
 //		Log.i("Player.jumpRate: "+rate);
 //		Log.i("Player.jumpHeight: "+getJumpHeight());
 //		Log.i("Player.ySpeed "+ySpeed);
@@ -582,7 +609,7 @@ public class Player extends BattleMan {
 		
 		if(gun!=null)
 			setGunLength();
-		}
+	}
 
     public void setViewPot() {
     	if(!World.editMode){
@@ -712,14 +739,14 @@ public class Player extends BattleMan {
            
                 if(treader!=c){
                 	if(
-                			!downData[5]&&
+                			!downActionMoved&&
 //                			(dYspeed>-6)//36
                 			!c.treadable
                 			)
 						enemySet.treaded(this, c, 0);
 					else 
 					{
-						downData[5]=false;
+						downActionMoved=false;
 						enemySet.treaded(this, c, attack);// not tread one much time
 						if(downData[3])jump(culJumpRate());
 						else ySpeed=c.getySpeed()+11.5f;//128 de ping fang gen

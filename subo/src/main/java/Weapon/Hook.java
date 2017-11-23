@@ -1,13 +1,12 @@
 package Weapon;
 
+import com.mingli.toms.World;
+
 import javax.microedition.khronos.opengles.GL10;
 
 import Enviroments.GrassSet;
 import Mankind.Creature;
 import Mankind.EnemySet;
-
-import com.mingli.toms.World;
-
 import element2.Tail;
 import element2.TexId;
 
@@ -42,7 +41,7 @@ public class Hook extends TailBullet {
 			getGrass=false;
 		} else {
 			if(getGrass){
-				hookGrass.stringCheck(player, hookLength, 0.3f, 0.95f);
+				hookGrass.stringCheck(player, hookLength, 0.3f, 0.99f);
 				
 				tail.startTouch(player.x, player.y);
 				tail.tringer(hookGrass.x,hookGrass. y);
@@ -112,6 +111,7 @@ public class Hook extends TailBullet {
 			speedCheck(player.x, player.y);
 			if (huckEnemy != null) {// 被别人拉走
 				huckEnemy.setPosition(x, y);
+				huckEnemy.attacked(attack/100);//攻击
 				if (Math.abs(x - huckEnemy.x) < (huckEnemy.getwEdge() + getW())
 						&& Math.abs(y - huckEnemy.y) < (huckEnemy.gethEdge() + getH())) {
 				} else {

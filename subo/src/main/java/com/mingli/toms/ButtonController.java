@@ -1,10 +1,5 @@
 package com.mingli.toms;
 
-import Mankind.Player;
-import aid.Circle;
-import aid.CircleSurface;
-import aid.MyMoveView;
-import aid.Producer;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,12 +8,19 @@ import android.os.Message;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SlidingDrawer;
+
+import Mankind.Player;
+import Mankind.PlayerBlader;
+import Mankind.PlayerWisper;
+import aid.Circle;
+import aid.CircleSurface;
+import aid.MyMoveView;
 
 /**
  * Created by Administrator on 2016/7/13.
@@ -117,6 +119,19 @@ public class ButtonController {
 						ActionBar.LayoutParams.MATCH_PARENT));
 
 		if(itemWindow!=null)itemWindow.initWindow();
+		CheckBox haveBlade = (CheckBox) (buttonView.findViewById(R.id.haveBlade));
+		if(!(player instanceof PlayerBlader)||!(player instanceof PlayerWisper))
+			haveBlade.setVisibility(View.GONE);
+		(haveBlade).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//				acti.world.
+				{
+					if(isChecked)player.haveBlade();
+					else player.noBlade();
+				}
+			}
+		});
 	}
 
 	/*

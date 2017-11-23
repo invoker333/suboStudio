@@ -9,7 +9,7 @@ import Module.TexIdAndBitMap;
 
 public class BoomSet extends LightSpotSet{
 
-	ArrayList<Boom> boomList;
+	public ArrayList<Boom> boomList;
 //	private int count;
 
 	public BoomSet(int count) {
@@ -36,7 +36,7 @@ public class BoomSet extends LightSpotSet{
 
 	public void tringer(float x, float y) {
 		if(tringerIndex>=boomList.size())tringerIndex=0;
-		LightSpot boom = boomList.get(tringerIndex++);
+		Boom boom = boomList.get(tringerIndex++);
 		boom.tringer(x, y);
 	}
 

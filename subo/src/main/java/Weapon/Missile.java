@@ -1,20 +1,21 @@
 package Weapon;
 
+import com.mingli.toms.World;
+
 import javax.microedition.khronos.opengles.GL10;
 
-import Enviroments.Grass;
+import Element.BoomSet;
 import Enviroments.GrassSet;
 import Mankind.Creature;
 import Mankind.EnemySet;
-
-import com.mingli.toms.MusicId;
-import com.mingli.toms.World;
+import element2.TexId;
 
 public class Missile extends TailBullet{
 
 
 	private final GrassDestoryer grassDestoryer;
 	BoomAttack boomA;
+	BoomSet bs;
 	public Missile(EnemySet es,GrassSet gra) {
 		super(es,gra);
 		attack=4*World.baseAttack;
@@ -22,6 +23,7 @@ public class Missile extends TailBullet{
 		setSize(12, 12);
 		boomA=new BoomAttack();
 		grassDestoryer=new GrassDestoryer(gra,this);
+		bs=new BoomSet(10, TexId.FOG);
 	}
 	
 	void shot(){
@@ -29,8 +31,13 @@ public class Missile extends TailBullet{
 		final float a=1.03f;
 		xSpeed*=a;
 		ySpeed*=a;
+		if(Math.pow(boomx-x,2)+Math.pow(boomy-y,2)>4000){
+			bs.tringer(x,y);
+			boomx=x;
+			boomy=y;
+		}
 	}
-	
+	float boomx,boomy;
 	protected void gotTarget(Creature enemy){
 		boomA.gotTarget(enemy,this,eList,es,attack);
 		if(enemy==es.enemyGrass){
@@ -41,6 +48,7 @@ public class Missile extends TailBullet{
 
 	public void drawElement(GL10 gl){
 		boomA.drawElement(gl);
+		bs.drawElement(gl);
 		super.drawElement(gl);
 	}
 

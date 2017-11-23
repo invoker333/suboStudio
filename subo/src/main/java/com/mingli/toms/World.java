@@ -37,10 +37,12 @@ import Mankind.EnemySet;
 import Mankind.FlagPlayer;
 import Mankind.FlagPlayerBlader;
 import Mankind.FlagPlayerFat;
+import Mankind.FlagPlayerWisper;
 import Mankind.Player;
 import Mankind.PlayerBlader;
 import Mankind.PlayerFat;
 import Mankind.PlayerSet;
+import Mankind.PlayerWisper;
 import aid.Log;
 import element2.FireworkSet;
 import element2.GlDialog;
@@ -1110,13 +1112,15 @@ public class World extends GLSurfaceView implements Runnable {
 		if(acti.titleMode){
 			switch(acti.heroId){
 				case 0:			player=new FlagPlayer(mapSign,gra,this,x,y);break;
-				case 1:			player=new FlagPlayerBlader(mapSign,gra,this,x,y);break;
-				case 2:			player=new FlagPlayerFat(mapSign,gra,this,x,y);break;
+				case 1:			player=new FlagPlayerWisper(mapSign,gra,this,x,y);break;
+				case 2:			player=new FlagPlayerBlader(mapSign,gra,this,x,y);break;
+				case 3:			player=new FlagPlayerFat(mapSign,gra,this,x,y);break;
 			}
 		}else switch(acti.heroId){
 			case 0:			player=new Player(mapSign,gra,this,x,y);break;
-			case 1:			player=new PlayerBlader(mapSign,gra,this,x,y);break;
-			case 2:			player=new PlayerFat(mapSign,gra,this,x,y);break;
+			case 1:			player=new PlayerWisper(mapSign,gra,this,x,y);break;
+			case 2:			player=new PlayerBlader(mapSign,gra,this,x,y);break;
+			case 3:			player=new PlayerFat(mapSign,gra,this,x,y);break;
 		}
 		if(agoPlayer!=null){
 			player.setEnemySet(agoPlayer.getEnemySet());

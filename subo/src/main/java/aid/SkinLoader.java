@@ -122,6 +122,8 @@ public class SkinLoader {
             ti.reloadTextureId(TexId.BLACK, f);
         } else if (name.startsWith("boom2.")) {
             ti.reloadTextureId(TexId.BOOM, f);
+        } else if (name.startsWith("boom.")) {
+            ti.reloadTextureId(TexId.BOOMWHITE, f);
         } else if (name.startsWith("lightningset.")) {
             ti.reloadTextureId(TexId.THUNDER, f);
         } else if (name.startsWith("firework.")) {
@@ -229,6 +231,10 @@ public class SkinLoader {
             ti.reloadTextureId(TexId.PRICK, f);
         } else if (name.startsWith("spinex.")) {
             ti.reloadTextureId(TexId.PRICKX, f);
+        } else if (name.startsWith("capjianci.")) {
+            ti.reloadTextureId(TexId.CAPJIANCI, f);
+        } else if (name.startsWith("bag.")) {
+            ti.reloadTextureId(TexId.BAG, f);
 
         } else if (name.startsWith("zhijindong.")) {
             ti.reloadTextureId(TexId.DESERT, f);

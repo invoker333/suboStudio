@@ -104,6 +104,7 @@ static Bitmap emptyBitmap = Bitmap.createBitmap(1, 1,Bitmap.Config.ARGB_8888);
 	public static TexIdAndBitMap FIREWORK=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap THUNDER=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap BOOM=new TexIdAndBitMap(emptyBitmap,0);
+    public static TexIdAndBitMap BOOMWHITE=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap BLACK=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap RAINBOW=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap LIGHTNING=new TexIdAndBitMap(emptyBitmap,0);
@@ -145,7 +146,9 @@ static Bitmap emptyBitmap = Bitmap.createBitmap(1, 1,Bitmap.Config.ARGB_8888);
 	public static TexIdAndBitMap PUTONGQIANG=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap FENSHEN=new TexIdAndBitMap(emptyBitmap,0);
 	public static TexIdAndBitMap DIALOGTRINGLE=new TexIdAndBitMap(emptyBitmap,0);
-	
+	public static TexIdAndBitMap CAPJIANCI=new TexIdAndBitMap(emptyBitmap,0);
+	public static TexIdAndBitMap BAG=new TexIdAndBitMap(emptyBitmap,0);
+
 	public static int textureCount=200;//纹理数量 行号之差
 	
 	public  void loadTextureId(GL10 gl) {

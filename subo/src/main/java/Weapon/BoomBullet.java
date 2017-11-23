@@ -10,7 +10,7 @@ import element2.TexId;
 
 public class BoomBullet extends  Bullet{
 
-	BoomAttack boomA;
+	public BoomAttack boomA;
 	BulletCreature c;
 	public BoomBullet(EnemySet es,GrassSet gra) {
 		super( es,gra);

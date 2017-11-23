@@ -2,8 +2,6 @@ package Element;
 
 import javax.microedition.khronos.opengles.GL10;
 
-import com.mingli.toms.MusicId;
-
 import element2.TexId;
 
 public class Boom extends LightSpot{
@@ -15,7 +13,7 @@ public class Boom extends LightSpot{
 	
 //	static float max=2f;
 //	static float min=0f;
-	float alphaSpeed=-0.03f;
+public float alphaSpeed=-0.03f;
 	private float fruLength=1;
 	 void init() {
 			// TODO Auto-generated method stub
@@ -37,11 +35,16 @@ public class Boom extends LightSpot{
 			VΪ���������������˶��ٶ�.*/
 	//a=x*v^2 v=v-a   v=v-x*v^2=v(1-x*v)
 	// rate��ô˵Ҳ�ñȿ��С��
-	public void tringer(float x,float y){
+	public void tringer(float x,float y){//烟雾
 		super.tringer(x, y);
-		playSound(MusicId.bomb);
+		resetBooom();
+		fruSpeed=2;//应先嘎爆炸速度
+	}
+	public void tringer(float x,float y,int soundId){//爆炸
+		super.tringer(x, y);
 		resetBooom();
 		fruSpeed=40;//应先嘎爆炸速度
+		playSound(soundId);
 	}
 	public void drawElement(GL10 gl){
 		if(alpha<-1)return;

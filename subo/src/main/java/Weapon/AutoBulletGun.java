@@ -1,5 +1,7 @@
 package Weapon;
 
+import com.mingli.toms.Render;
+
 import java.util.ArrayList;
 
 import Enviroments.GrassSet;
@@ -7,15 +9,11 @@ import Mankind.Creature;
 import Mankind.EnemySet;
 import Mankind.Player;
 
-import com.mingli.toms.Render;
-
 public class AutoBulletGun extends Gun{
 
-	private  EnemySet es;
 	public AutoBulletGun(EnemySet es,GrassSet gra, Creature c, int bCount) {
 		super(es,gra, c, bCount);
 		// TODO Auto-generated constructor stub
-		this.es = es;
 		cd*=3;
 	}
 	protected void setBullet(int bCount) {
@@ -74,8 +72,8 @@ public class AutoBulletGun extends Gun{
 		
 		int enemyId=-1;
 		 double minDistance=10000*10000;// zheng wu qiong
-		for(int i=0;i<es.cList.size();i++){
-			Creature gp = es.cList.get(i);
+		for(int i=0;i<enemySet.cList.size();i++){
+			Creature gp = enemySet.cList.get(i);
 			if(gp.isDead)continue;
 			
 			if (gp.x < Player.gx1

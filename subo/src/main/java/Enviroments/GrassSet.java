@@ -19,7 +19,6 @@ import Mankind.Creeper;
 import Mankind.EmpPlatform;
 import Mankind.Emplacement;
 import Mankind.FireBall;
-import Mankind.FlagPlayer;
 import Mankind.Flyer;
 import Mankind.GunMan;
 import Mankind.Hedgehog;
@@ -242,7 +241,7 @@ public class GrassSet extends Set{
 					player.name="主角";
 					// here has no break because these two char has same code and different code
 				case 'Y':
-					if(player==null)player=new FlagPlayer(bi,this,world,(x+0.5f)*grid,(mapHeight-y)*grid);
+					if(player==null)player=world.changePlayer(bi,null,this,(x+0.5f)*grid,(mapHeight-y)*grid);
 //					setStartPosition(bi,(x+0.5f)*grid,(mapHeight-y)*grid);
 					if(World.editMode){
 						Creature c=new JointCreature(bi,this,(x+0.5f)*grid,(mapHeight-y)*grid);

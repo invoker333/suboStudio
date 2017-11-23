@@ -135,7 +135,7 @@ public class StartMenu{
 		Spinner spinner = (Spinner) startView.findViewById(R.id.heroSelectSpinner);
 		// 初始化控件
 // 建立数据源
-		String[] mItems ={"探险家","剑客","胖子"};
+		String[] mItems ={"探险家","女巫","剑客","胖子"};
 // 建立Adapter并且绑定数据源
 		ArrayAdapter<String> adapter=new ArrayAdapter<String>(acti,android.R.layout.simple_spinner_item, mItems);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
