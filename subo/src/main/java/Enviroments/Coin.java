@@ -13,8 +13,8 @@ import element2.TexId;
 public class Coin extends SixFruit {
 	private int coinCount = 1;
 	
-	Coin(char bi,float x, float y) {
-		super(bi,x, y);
+	Coin(char bi,GrassSet grassSet,float x, float y) {
+		super(bi,grassSet, x, y);
 		name="金币";
 		setScore(5);
 //		Log.i("coinx"+x,""+y);
@@ -31,7 +31,7 @@ public class Coin extends SixFruit {
 		// TODO Auto-generated method stub
 		return getTextureId().bitmap;
 	}
-	void init() {
+	protected void init() {
 		loadTexture(TexId.COIN);
 		loadSound(MusicId.coin);
 	}

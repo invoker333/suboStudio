@@ -43,7 +43,6 @@ public class BattleMan extends JointCreature{
 	protected  int toukuiTime;
     protected  int gaoTime;
     public  int flyTime;
-	public  boolean[] downData ;
 	  boolean doubleClicked;
 		private Pifeng pifeng;
 		Tail footTail;
@@ -53,6 +52,14 @@ public class BattleMan extends JointCreature{
 	boolean upActionMoved;
 	boolean leftActionMoved;
 	boolean rightActionMoved;
+	public boolean KEY_LEFT_DOWN;
+	public boolean KEY_RIGHT_DOWN;
+	public boolean KEY_ATTACK_DOWN;
+	public boolean KEY_DOUBLE_CLICK_DOWN;
+	public boolean KEY_JUMP_DOWN;
+	public boolean KEY_TREAD_DOWN;
+	public boolean KEY_UP_DOWN;
+	public boolean KEY_DOWN_DOWN;
 
 	protected void initEffect(float x, float y) {
 		  DEATHSPEED=super.DEATHSPEED/2;
@@ -99,13 +106,13 @@ public class BattleMan extends JointCreature{
 
 	 void actCheck(Creature controller) {
 	    	
-	        if (!downData[0] && !downData[1]) {
+	        if (!KEY_LEFT_DOWN && !KEY_RIGHT_DOWN) {
 				controller. stopMove();
 				setDoubleClicked(false);
 			}
 	    	
-	        if (downData[0]) {
-	            downData[1] = false;// ��ֹ�����ж�
+	        if (KEY_LEFT_DOWN) {
+	            KEY_RIGHT_DOWN = false;// ��ֹ�����ж�
 	            if (isDoubleClicked())
 	                controller.changeSpeed(-1.5f);
 	            else
@@ -115,8 +122,8 @@ public class BattleMan extends JointCreature{
 	            if(controller!=this)  faceLeft();
 	            if (controller.getxSpeed() == getxSpeedMax() && isJumpAble()) playSound(brake);
 	        }
-	        if (downData[1]) {
-	            downData[0] = false;// ��ֹ�����ж�
+	        if (KEY_RIGHT_DOWN) {
+	            KEY_LEFT_DOWN = false;// ��ֹ�����ж�
 	            if (isDoubleClicked())
 	            	controller. changeSpeed(1.5f);        	
 	            else
@@ -128,7 +135,7 @@ public class BattleMan extends JointCreature{
 	            if (controller.getxSpeed() == getxSpeedMin() && isJumpAble()) playSound(brake);
 	        }
 	    
-	        if (downData[2]) {
+	        if (KEY_ATTACK_DOWN) {
 //	            if (controller.isAttackAble()) {
 	            	controller.attack();
 	            	attack();
@@ -137,7 +144,7 @@ public class BattleMan extends JointCreature{
 	        
 	        gunAngleAndCdCheck();
 	     
-	        if(downData[7]){
+	        if(KEY_DOUBLE_CLICK_DOWN){
 	        	if(!doubleClicked)setDoubleClicked(true);
 	        }else {
 	        	setDoubleClicked(false);
@@ -165,8 +172,7 @@ public class BattleMan extends JointCreature{
 		treadable=false;
 		attack=0;
 		this.force_in_battle = force_in_battle;
-		downData = new boolean[8];
-		
+
 		initEffect(x, y);
 		 initVtDestory();
 	}
@@ -467,7 +473,7 @@ public class BattleMan extends JointCreature{
     		Client.sendUdp(ConsWhenConnecting.THIS_IS_BATTLE_MESSAGE+
     				MenuActivity.userId+" "+BattleActivity.roomId+" "+(int)x+" "+(int)y+" "+(int)xSpeed+" "+(int)ySpeed+" "+gunAngle+" "
     				+fdirection+" "+sendMesId+++" "///////////
-    				+downData[0]+" "+downData[1]+" "+downData[2]+" "+downData[7]+" "+isDead);
+    				+KEY_LEFT_DOWN+" "+KEY_RIGHT_DOWN+" "+KEY_ATTACK_DOWN+" "+KEY_DOUBLE_CLICK_DOWN+" "+isDead);
 //    	}
 	}
 	public void timerTask(){
@@ -500,11 +506,11 @@ public class BattleMan extends JointCreature{
 //			}
 		idMaxREceive=(Integer.parseInt(strOnlineMesSet[8]));
 		
-		downData[0]=Boolean.parseBoolean(strOnlineMesSet[9]);
-		downData[1]=Boolean.parseBoolean(strOnlineMesSet[10]);
-		downData[2]=Boolean.parseBoolean(strOnlineMesSet[11]);
+		KEY_LEFT_DOWN=Boolean.parseBoolean(strOnlineMesSet[9]);
+		KEY_RIGHT_DOWN=Boolean.parseBoolean(strOnlineMesSet[10]);
+		KEY_ATTACK_DOWN=Boolean.parseBoolean(strOnlineMesSet[11]);
 		
-		downData[7]=Boolean.parseBoolean(strOnlineMesSet[12]);
+		KEY_DOUBLE_CLICK_DOWN=Boolean.parseBoolean(strOnlineMesSet[12]);
 		
 		strOnlineMesSet=null;
 	}
@@ -554,6 +560,7 @@ public class BattleMan extends JointCreature{
 	}
 	protected void relifeJust() {
 		isDead=false;
+		isDeadNoDraw=false;
 		setLife(getLifeMax());
 		alpha=1;
 		angle=0;
@@ -581,5 +588,5 @@ public class BattleMan extends JointCreature{
 		// TODO Auto-generated method stub
 		Client.send(ConsWhenConnecting.USE_ITEM+MenuActivity.userId+" "+f.mapSign);
 	}
-	
+
 }

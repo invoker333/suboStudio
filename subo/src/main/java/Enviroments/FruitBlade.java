@@ -9,8 +9,8 @@ import element2.TexId;
 
 public class FruitBlade extends RotateFruit{
 
-	public FruitBlade(char bi,float x, float y) {
-		super(bi,x, y);
+	public FruitBlade(char bi,GrassSet grassSet,float x, float y) {
+		super(bi,grassSet,x, y);
 		name="桃木剑";
 		setGoodsCost(30, 0);
 		// TODO Auto-generated constructor stub

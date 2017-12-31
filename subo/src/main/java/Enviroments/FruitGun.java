@@ -10,8 +10,8 @@ import element2.TexId;
 
 public class FruitGun extends RotateFruit{
 
-	public FruitGun(char bi, float x, float y, TexIdAndBitMap textureId) {
-		super(bi,x, y);
+	public FruitGun(char bi,GrassSet grassSet, float x, float y, TexIdAndBitMap textureId) {
+		super(bi,grassSet, x, y);
 		mapSign=bi;
 		// TODO Auto-generated constructor stub
 		setTextureId(textureId);

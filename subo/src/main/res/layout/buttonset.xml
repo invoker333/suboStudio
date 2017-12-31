@@ -60,8 +60,15 @@
         android:layout_alignParentLeft="true"
         android:background="@drawable/direction"
         android:progress="50"
+        android:visibility="invisible"
         android:thumb="@drawable/button_thumb" />
 
+    <aid.Circle
+        android:id="@+id/circleDirection"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_alignParentBottom="true"
+        />
     <aid.Circle
         android:id="@+id/circle1"
         android:layout_width="128dp"

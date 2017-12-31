@@ -88,9 +88,9 @@ public class PlayerFat extends Player {
     public void jump(float rate){
         super.jump(rate);
         sitDownAir=true;
-        if(rate>0.33){
-            rotateBody=true;
-        }
+//        if(rate>0.33){
+//            rotateBody=true;
+//        }
     }
 
     @Override

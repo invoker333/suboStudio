@@ -209,4 +209,10 @@ public class AnimationMove extends Animation{
 		public void setySpeed(float vt) {
 			this.ySpeed = vt;
 		}
+
+    public void CircleDown(float v, int viewId,int dx,int dy) {
+    }
+
+	public void CircleUp(int viewId) {
+	}
 }

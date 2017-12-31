@@ -14,15 +14,15 @@ public class Toukui extends ShakeFruit{
 
 	private int time;
 
-	public Toukui(char bi,float x, float y,int time) {
-		super(bi,x, y);
+	public Toukui(char bi,GrassSet grassSet,float x, float y,int time) {
+		super(bi,grassSet, x, y);
 		// TODO Auto-generated constructor stub
 		this.time = time;
 		name="头盔";
 		instruction="使用后可以顶掉上方一些砖块";
 		setGoodsCost(5,0);
 	}
-	void init(){
+	protected void init(){
 		loadTexture(TexId.TOUKUI);
 		loadSound(MusicId.creeper4);
 	}
@@ -39,8 +39,8 @@ public class Toukui extends ShakeFruit{
 class Gao extends ShakeFruit{
 
 	private int time;
-	public Gao(char bi,float x, float y, int time) {
-		super(bi,x, y);
+	public Gao(char bi,GrassSet grassSet,float x, float y, int time) {
+		super(bi,grassSet, x, y);
 		// TODO Auto-generated constructor stub
 		this.time = time;
 		name="十字镐";
@@ -48,7 +48,7 @@ class Gao extends ShakeFruit{
 		setGoodsCost(5,0);
 //		footTail=new Tail(15,x,y,8);
 	}
-	void init(){
+	protected void init(){
 		loadTexture(TexId.GAO);
 		loadSound(MusicId.gore);
 	}
@@ -59,15 +59,15 @@ class Gao extends ShakeFruit{
 class FruitFly extends ShakeFruit{
 
 	private int time;
-	public FruitFly(char bi,float x, float y, int time) {
-		super(bi,x, y);
+	public FruitFly(char bi,GrassSet grassSet,float x, float y, int time) {
+		super(bi, grassSet, x, y);
 		// TODO Auto-generated constructor stub
 		this.time = time;
 		name="飞行套装";
 		instruction="使用后穿上帅气的披风，并且点击任意位置可跳跃";
 		setGoodsCost(10,0);
 	}
-	void init(){
+	protected void init(){
 		loadTexture(TexId.FRUITFLY);
 		loadSound(MusicId.land);
 	}
@@ -98,19 +98,19 @@ class FruitFly extends ShakeFruit{
 
 	private int time;
 
-	public Wudi(char bi,float x, float y,int time) {
-		super(bi,x, y);
+	public Wudi(char bi,GrassSet grassSet,float x, float y,int time) {
+		super(bi,grassSet, x, y);
 		// TODO Auto-generated constructor stub
 		this.time = time;
 		name="无敌果";
 		instruction="使用后无敌"+time/60+"秒";
 		setGoodsCost(50,0);
 	}
-	public Wudi(char bi,float x, float y) {
-		this(bi,x,y,10*60);
+	public Wudi(char bi,GrassSet grassSet,float x, float y) {
+		this(bi,grassSet, x,y,10*60);
 		// TODO Auto-generated constructor stub
 	}
-	void init(){
+	protected void init(){
 		setSoundId(MusicId.light);
 		loadTexture(TexId.ZAN);
 	}
@@ -127,19 +127,19 @@ class FruitFly extends ShakeFruit{
 		private int time;
 		private int count=10;
 
-		public Fenshen(char bi,float x, float y,int count) {
-			super(bi,x, y);
+		public Fenshen(char bi,GrassSet grassSet,float x, float y,int count) {
+			super(bi,grassSet, x, y);
 			this.count = count;
 			// TODO Auto-generated constructor stub
 			name="分身果";
 			instruction="使用后分身为"+(count+1)+"个。点击任意个体使本体与之交换位置。";
 			setGoodsCost(50,50);
 		}
-		public Fenshen(char bi,float x, float y) {
-			this(bi,x,y,4);
+		public Fenshen(char bi,GrassSet grassSet,float x, float y) {
+			this(bi, grassSet, x,y,4);
 			// TODO Auto-generated constructor stub
 		}
-		void init(){
+		protected void init(){
 			setSoundId(MusicId.light);
 			loadTexture(TexId.FENSHEN);
 		}

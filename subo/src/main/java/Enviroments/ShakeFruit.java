@@ -8,11 +8,13 @@ public class ShakeFruit extends Fruit{
 	float aMax=0.1f;
 	private float angle=-30;//起始位置
 	
-	public ShakeFruit(char bi,float x, float y){
-		super(bi,x,y);
-		mapSign=bi;
+	public ShakeFruit(char bi,GrassSet grassSet,float x, float y){
+		super(bi, grassSet, x, y);
 	}
 	public void drawElement(GL10 gl){
+		move();
+		gravity();
+
 		if(angle<0){//7*7=49 居中位置
 //			angleSpeed=-angleSpeed;
 			angleA=aMax;
@@ -28,7 +30,7 @@ public class ShakeFruit extends Fruit{
 		gl.glColor4f(getRed(), getGreen(), getBlue(), getAlpha());
 		gl.glTranslatef(x, y, 0);
 		gl.glRotatef(angle, 0, 0, 1);
-		super.drawElement(gl);
+		super.baseDrawElement(gl);
 		gl.glRotatef(-angle, 0, 0, 1);
 		gl.glTranslatef(-x, -y, 0);
 		gl.glColor4f(1, 1, 1, 1);

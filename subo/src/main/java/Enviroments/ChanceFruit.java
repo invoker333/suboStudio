@@ -12,8 +12,8 @@ public class ChanceFruit extends ShakeFruit{
 
 	private int time;
 
-	public ChanceFruit(char bi,float x, float y,int time) {
-		super(bi,x, y);
+	public ChanceFruit(char bi,GrassSet grassSet,float x, float y,int time) {
+		super(bi,grassSet, x, y);
 		this.time = time;
 		name="复活蛋";
 		setGoodsCost(0, 10);

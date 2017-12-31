@@ -18,13 +18,15 @@ public class Circle extends View {
     private int RockerCircleY = LENGTH;  
    
     //摇杆的X,Y坐标以及摇杆的半径  
-    private float SmallRockerCircleX = LENGTH;  
-    private float SmallRockerCircleY = LENGTH;  
+    private int SmallRockerCircleX = LENGTH;
+    private int SmallRockerCircleY = LENGTH;
     
     private int SmallRockerCircleR = 32;
     private int RockerCircleR = LENGTH-SmallRockerCircleR;
 	private double rad;
-	public Player player;  
+	public Player player;
+    public int viewId;
+
     private void cons(Context context) {
         this.setKeepScreenOn(true);  
         paint = new Paint();  
@@ -85,7 +87,7 @@ public class Circle extends View {
             // 当触屏区域不在活动范围内  
         	double tempRad = getRad(RockerCircleX, RockerCircleY, event.getX(), event.getY());  
         	//得到摇杆与触屏点所形成的角度  
-        	player.CircleDown((float) -rad);
+        	player.CircleDown((float) -rad,viewId, (int) event.getX()-SmallRockerCircleX,(int)event.getY()-SmallRockerCircleY);
             if (Math.sqrt(Math.pow((RockerCircleX - (int) event.getX()), 2)   
                     + Math.pow((RockerCircleY - (int) event.getY()), 2)) >= RockerCircleR) {  
                 //保证内部小圆运动的长度限制  
@@ -93,17 +95,17 @@ public class Circle extends View {
             } else {//如果小球中心点小于活动区域则随着用户触屏点移动即可  
                 SmallRockerCircleX = (int) event.getX();  
                 SmallRockerCircleY = (int) event.getY();  
-            }  
-           
+            }
+
         } else if (event.getAction() == MotionEvent.ACTION_UP) {  
             //当释放按键时摇杆要恢复摇杆的位置为初始位置  
             SmallRockerCircleX = LENGTH;  
             SmallRockerCircleY = LENGTH; 
-           player.CircleUp();
+           player.CircleUp(viewId);
            }  
     	
         invalidate();
-        return true;  
+        return true;
     }  
     /** 
      *  
@@ -118,9 +120,9 @@ public class Circle extends View {
      */  
     public void getXY(float centerX, float centerY, float R, double rad) {  
         //获取圆周运动的X坐标   
-        SmallRockerCircleX = (float) (R * Math.cos(rad)) + centerX;  
+        SmallRockerCircleX = (int) ((R * Math.cos(rad)) + centerX);
         //获取圆周运动的Y坐标  
-        SmallRockerCircleY = (float) (R * Math.sin(rad)) + centerY;  
+        SmallRockerCircleY = (int) ((R * Math.sin(rad)) + centerY);
     }  
     public void onDraw(Canvas canvas) {  
 //        try {  

@@ -10,14 +10,15 @@ import Mankind.BattleMan;
 
 
 public class SixFruit extends Fruit{
-	public SixFruit(char bi,float x, float y) {
-		super(bi,x,y);
-		
-		// TODO Auto-generated constructor stub
+	public SixFruit(char bi,GrassSet grassSet,float x, float y){
+		super(bi, grassSet, x, y);
 	}
 	protected int angleSpeed=3;
 	private int angle;
 	public void drawElement(GL10 gl){
+		move();
+		gravity();
+
 		gl.glEnable(GL10.GL_CULL_FACE);//背面裁剪
 		angle+=angleSpeed;
 		gl.glTranslatef(x, y, 0);

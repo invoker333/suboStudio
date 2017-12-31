@@ -36,7 +36,14 @@ public class ButtonController {
 	private CircleSurface circleSurface;
 	private Player player;
 	private Drawable ob;
-
+	public View.OnTouchListener ontl;
+	private View menu;
+	RelativeLayout buttonView;
+	private Circle circle;
+	private View attack;
+	private View ride;
+	private mySeekBar jumpSeekBar;
+	private ImageButton eraser;
 	ButtonController(Activity acti, World world, GameMenu gameMenu) {
 		this.acti = (MenuActivity) acti;
 		this.world = world;
@@ -51,12 +58,12 @@ public class ButtonController {
 		if (buttonView == null) {
 			buttonView = (RelativeLayout) acti.getLayoutInflater().inflate(
 					R.layout.buttonset, null);
-		itemWindow = new ItemWindow(acti,(SlidingDrawer) buttonView	.findViewById(R.id.slidingDrawer1), world);
+		itemWindow = new ItemWindow(acti,(SlidingDrawer) buttonView	.findViewById(R.id.slidingDrawer1), world,world.grassSet);
 		if(!World.rpgMode)itemWindow.hide();
 			
-		menu = (View) buttonView.findViewById(R.id.pause);
+		menu =  buttonView.findViewById(R.id.pause);
 //			View left = buttonView.findViewById(R.id.left);
-//			View right = (View) buttonView.findViewById(R.id.right);
+
 			SeekBar directionSeekBar = (SeekBar) buttonView
 					.findViewById(R.id.directionSeekBar);
 			ride = buttonView.findViewById(R.id.ride);
@@ -67,11 +74,13 @@ public class ButtonController {
 			jumpSeekBar = (mySeekBar) buttonView
 					.findViewById(R.id.jumpSeekbar1);
 			attack = (View) buttonView.findViewById(R.id.attack);
+			Circle circleDirection = (Circle) buttonView.findViewById(R.id.circleDirection);
 			circle = (Circle) buttonView.findViewById(R.id.circle1);
-			
+			circleDirection.viewId=R.id.circleDirection;
+			circle.viewId=R.id.circle1;
 			if(Player.extendsBladeFruitId==-1)attack.setVisibility(View.INVISIBLE);
 			if(Player.extendsGunFruitId==-1)circle.setVisibility(View.INVISIBLE);
-			
+			circleDirection.player = world.player;
 			circle.player = world.player;
 			circleSurface = (CircleSurface) buttonView
 					.findViewById(R.id.circlesurface1);
@@ -87,8 +96,6 @@ public class ButtonController {
 			
 			ontl = new ClickGame();
 			jumpSeekBar.setOnTouchListener(ontl);
-//			left.setOnTouchListener(ontl);
-//			right.setOnTouchListener(ontl);
 			attack.setOnTouchListener(ontl);
 			ride.setOnTouchListener(ontl);
 			shopButton.setOnTouchListener(ontl);
@@ -160,19 +167,19 @@ public class ButtonController {
 
 			case R.id.jumpSeekbar1:
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
-					player.downData[3] = true;
+					player.KEY_JUMP_DOWN = true;
 				} else 
 					if (event.getAction() == MotionEvent.ACTION_UP) {
-					player.downData[3] = false;
+					player.KEY_JUMP_DOWN = false;
 //					((ProgressBar) acti.findViewById(R.id.jumpSeekbar1)).setProgress(75);
 				}
 				return false;// return false 不截取事件 否则不能矮跳
 			case R.id.attack:
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
-					player.downData[2] = true;
+					player.KEY_ATTACK_DOWN = true;
 					v.setBackgroundResource(R.drawable.button_attack1);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
-					player.downData[2] = false;
+					player.KEY_ATTACK_DOWN = false;
 					v.setBackgroundResource(R.drawable.button_attack);
 				}
 				break;
@@ -188,10 +195,10 @@ public class ButtonController {
 			case R.id.ride:
 
 				if (event.getAction() == MotionEvent.ACTION_DOWN) {
-					player.downData[6] = true;
+					player.KEY_TREAD_DOWN = true;
 					v.setBackgroundResource(R.drawable.ride2);
 				} else if (event.getAction() == MotionEvent.ACTION_UP) {
-					// Player.downData[6]=false;
+					// Player.KEY_TREAD_DOWN=false;
 					v.setBackgroundResource(R.drawable.ride);
 				}
 				break;
@@ -273,13 +280,13 @@ public class ButtonController {
 			// TODO Auto-generated method stub
 			switch (seekBar.getId()) {
 			case R.id.jumpSeekbar1:
-				player.downData[3] = false;
+				player.KEY_JUMP_DOWN = false;
 				seekBar.setProgress(75);
 				break;
 			case R.id.directionSeekBar:
-				player.downData[0]=false;
-				player.downData[1]=false;
-				player.downData[7]=false;
+				player.KEY_LEFT_DOWN=false;
+				player.KEY_RIGHT_DOWN=false;
+				player.KEY_DOUBLE_CLICK_DOWN=false;
 				agoProgress=50;
 				seekBar.setProgress(50);
 				break;
@@ -288,7 +295,7 @@ public class ButtonController {
 
 		@Override
 		public void onStartTrackingTouch(SeekBar seekBar) {
-			if(seekBar.getId()==R.id.jumpSeekbar1)player.downData[3] = true;
+			if(seekBar.getId()==R.id.jumpSeekbar1)player.KEY_JUMP_DOWN = true;
 			
 			else if(seekBar.getId()==R.id.directionSeekBar){
 //				player.doubleDownCheck();
@@ -300,18 +307,18 @@ public class ButtonController {
 				boolean fromUser) {
 			switch (seekBar.getId()) {
 			case R.id.jumpSeekbar1:
-				player.downData[3] = true;
+				player.KEY_JUMP_DOWN = true;
 				Player.jumpProgress=progress;
 				
 				break;
 			case R.id.directionSeekBar:
 				slideCheck(progress);
 				if (progress < 50) {
-					player.downData[0] = true;
-					player.downData[1] = false;
+					player.KEY_LEFT_DOWN = true;
+					player.KEY_RIGHT_DOWN = false;
 				}else if (progress > 50) {
-					player.downData[1] = true;
-					player.downData[0] = false;
+					player.KEY_RIGHT_DOWN = true;
+					player.KEY_LEFT_DOWN = false;
 				}
 				break;
 			}
@@ -323,20 +330,13 @@ public class ButtonController {
 			if(agoProgress!=50
 							&&Math.abs(progress-agoProgress)>4) {
 				//				doubleClicked=true;
-				player.downData[7]=true;
+				player.KEY_DOUBLE_CLICK_DOWN=true;
 			}
 				
 			agoProgress=progress;
 		}
 	};
-	public View.OnTouchListener ontl;
-	private View menu;
-	RelativeLayout buttonView;
-	private Circle circle;
-	private View attack;
-	private View ride;
-	private mySeekBar jumpSeekBar;
-	private ImageButton eraser;
+
 
 	public void hide() {
 		// TODO Auto-generated method stub

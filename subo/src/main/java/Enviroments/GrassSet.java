@@ -210,30 +210,30 @@ public class GrassSet extends Set{
 						gList.add(bro2);
 						bro2.name="竹子";
 					break;//U 表示地洞 竹子
-				case 49: coinList.add(fruit=new Coin('1', (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="金币";break;//1
-				case 50: goal=new Goal(bi, x*grid,(mapHeight-y-1)*grid);goal.name="目标";break;//2
+				case 49: coinList.add(fruit=new Coin('1',this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="金币";break;//1
+				case 50: goal=new Goal(bi,this, x*grid,(mapHeight-y-1)*grid);goal.name="目标";break;//2
 				case 51: break;
 				case 52:break;
-				case 'B':fruitList.add(fruit=new FruitGun(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.MISSILE));fruit.name="火箭筒";break;//B boom
-				case 67:fruitList.add(fruit=new ChanceFruit(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,World.baseWudiTime));fruit.name="复活蛋";break;//C 加机会
-				case 68:fruitList.add(fruit=new FruitGun(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.HOOKGUN));fruit.name="钩爪";break;//D drag hook
-				case 'Q':fruitList.add(fruit=new Fenshen(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="分身果";break;
-				case 71:fruitList.add(fruit=new Gao(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,9999));fruit.name="十字镐";break;//G
-				case 72:fruitList.add(fruit=new sizeFruit(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="变形果";break;//H
-				case 75:fruitList.add(fruit=new FruitBlade( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="剑";break;//k
-				case 'J':fruitList.add(fruit=new FruitFly( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid, 9999));fruit.name="飞行套装";break;// J jumppen qi guo
-				case 77:fruitList.add(fruit=new FruitGun( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.JUJI));fruit.name="狙击枪";break;//M 
-				case 79:fruitList.add(fruit=new FruitGun(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.PUTONGQIANG));fruit.name="步枪";break;//O normal bullet
-				case 83:fruitList.add(fruit=new FruitGun( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.SHOTGUN));fruit.name="散弹枪";break;//S 
-				case 'P':fruitList.add(fruit=new FruitGun( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.BOOMGUN));fruit.name="炸弹枪";break;//
-				case 'L':fruitList.add(fruit=new FruitGun( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.ZIDONGDAN));fruit.name="自动泡泡枪";break;//L
-				case 'N':fruitList.add(fruit=new FruitGun( bi,(x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.GUANGDANQIANG));fruit.name="光弹枪";break;
+				case 'B':fruitList.add(fruit=new FruitGun(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.MISSILE));fruit.name="火箭筒";break;//B boom
+				case 67:fruitList.add(fruit=new ChanceFruit(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,World.baseWudiTime));fruit.name="复活蛋";break;//C 加机会
+				case 68:fruitList.add(fruit=new FruitGun(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.HOOKGUN));fruit.name="钩爪";break;//D drag hook
+				case 'Q':fruitList.add(fruit=new Fenshen(bi, this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="分身果";break;
+				case 71:fruitList.add(fruit=new Gao(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,9999));fruit.name="十字镐";break;//G
+				case 72:fruitList.add(fruit=new sizeFruit(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="变形果";break;//H
+				case 75:fruitList.add(fruit=new FruitBlade( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="剑";break;//k
+				case 'J':fruitList.add(fruit=new FruitFly( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid, 9999));fruit.name="飞行套装";break;// J jumppen qi guo
+				case 77:fruitList.add(fruit=new FruitGun( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.JUJI));fruit.name="狙击枪";break;//M
+				case 79:fruitList.add(fruit=new FruitGun(bi, this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.PUTONGQIANG));fruit.name="步枪";break;//O normal bullet
+				case 83:fruitList.add(fruit=new FruitGun( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.SHOTGUN));fruit.name="散弹枪";break;//S
+				case 'P':fruitList.add(fruit=new FruitGun( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.BOOMGUN));fruit.name="炸弹枪";break;//
+				case 'L':fruitList.add(fruit=new FruitGun( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.ZIDONGDAN));fruit.name="自动泡泡枪";break;//L
+				case 'N':fruitList.add(fruit=new FruitGun( bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.GUANGDANQIANG));fruit.name="光弹枪";break;
 				case 84:if(World.rpgMode){
-					fruitList.add(fruit=new Tomato(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid, 500));fruit.name="恢复药";break;//T 加血道具
+					fruitList.add(fruit=new Tomato(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid, 500));fruit.name="恢复药";break;//T 加血道具
 				}
-				case 110:fruitList.add(fruit=new Toukui(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,9999));fruit.name="头盔";break;//n toukui
-				case 'x':fruitList.add(fruit=new FruitGun(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.SHUFUDAN));fruit.name="束缚枪";break;//
-				case 'V':fruitList.add(fruit=new Wudi(bi, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="无敌果";break;//
+				case 110:fruitList.add(fruit=new Toukui(bi, this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,9999));fruit.name="头盔";break;//n toukui
+				case 'x':fruitList.add(fruit=new FruitGun(bi, this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid,TexId.SHUFUDAN));fruit.name="束缚枪";break;//
+				case 'V':fruitList.add(fruit=new Wudi(bi,this, (x+0.5f)*grid,(mapHeight-y-0.5f)*grid));fruit.name="无敌果";break;//
 				case 'X':break;
 				case 'A':
 					player=world.changePlayer(' ',null,this,(x+0.5f)*grid,(mapHeight-y)*grid);
@@ -293,7 +293,7 @@ public class GrassSet extends Set{
 		}
 		
 		enemyList.addAll(emplacementList);
-		
+		enemyList.addAll(fruitList);
 		setGrassId(getgList().size());
 		
 		sort();//添加并调整绘画顺序
@@ -321,7 +321,7 @@ public class GrassSet extends Set{
 			x1=grid*mapWidth-500; 			x2=500;		}
 		else {			x1=500;	x2=grid*mapWidth-500; 		}		
 		
-		if(goal==null)goal=new Goal('2', x1, 400);
+		if(goal==null)goal=new Goal('2',this, x1, 400);
 		else goal.searchBoss(player,enemyList);// else is important
 		animationList.add(goal);
 		if(player==null)player=new Player('A', this, world, x2, 400);

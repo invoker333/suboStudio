@@ -42,25 +42,25 @@ public class Client implements Runnable{
 //				Log.i("subString"+substring);
 				Player player=acti.world.player;
 				if (substring.equals("da")) {
-					player.downData[0]=true;
-					player.downData[1]=false;
+					player.KEY_LEFT_DOWN=true;
+					player.KEY_RIGHT_DOWN=false;
 				} else if (substring.equals("dd")) {
-					player.downData[1]=true;
-					player.downData[0]=false;
+					player.KEY_RIGHT_DOWN=true;
+					player.KEY_LEFT_DOWN=false;
 				} else if (substring.equals("ua")) {
-					player.downData[0]=false;
+					player.KEY_LEFT_DOWN=false;
 				} else if (substring.equals("ud")) {
-					player.downData[1]=false;
+					player.KEY_RIGHT_DOWN=false;
 				} else if (substring.equals("d7")) {
-					player.downData[2]=true;
+					player.KEY_ATTACK_DOWN=true;
 				} else if (substring.equals("u7")) {
-					player.downData[2]=false;
+					player.KEY_ATTACK_DOWN=false;
 				}
 				 else if (substring.equals("d8")) {
-						player.downData[3]=true;
+						player.KEY_JUMP_DOWN=true;
 						player.jumpProgress=100;
 					} else if (substring.equals("u8")) {
-						player.downData[3]=false;
+						player.KEY_JUMP_DOWN=false;
 					}
 			}
 		};

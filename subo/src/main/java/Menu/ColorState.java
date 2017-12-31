@@ -13,7 +13,7 @@ public class ColorState extends State{
 		// TODO Auto-generated constructor stub
 	}
 	public void drawElement(GL10 gl){
-		gl.glColor4f(World.red+red, World.green+green, World.blue+blue, World.alpha);
+//		gl.glColor4f(World.red+red, World.green+green, World.blue+blue, World.alpha);
 		super.drawElement(gl);
 		gl.glColor4f(1,1,1,1);
 	}

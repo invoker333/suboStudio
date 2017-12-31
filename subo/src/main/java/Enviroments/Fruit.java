@@ -4,43 +4,61 @@ import java.util.ArrayList;
 
 import Element.Animation;
 import Mankind.BattleMan;
+import Mankind.Creature;
 
 import com.mingli.toms.MusicId;
+import com.mingli.toms.World;
 
-public class Fruit extends Animation{
+import javax.microedition.khronos.opengles.GL10;
+
+public class Fruit extends Creature{
 	private float alpha=1;
 	private float blue=1.2f;
 	private float green=1.2f;
 	private float red=1.2f;
 	
-	
 	String kind="fruit";
 	public String instruction="这个物品的作用作用有待您去发现";
 	
-	public Fruit(char bi,float x,float y){
-		this();
-//		start
-		mapSign=bi;
+	public Fruit(char bi,GrassSet grassSet,float x,float y){
+		super(bi,grassSet, x, y	);
+
+		setG(0);
+		attack=0;
+		setW(30);
+		setH(30);
+
+		wEdge=w;
+		hEdge=h;
+
+		setAnimationFinished(false);
+		init();
 		this.setPosition(x, y);
 		setStartXY(x,y);
 	}
-	Fruit(){
-		setW(30);
-		setH(30);
-		
-		wEdge=w;
-		hEdge=h;
-		
-		setAnimationFinished(false);
-		init();
-	}
-	void doubleCost(int max){
+
+    @Override
+    public void die() {
+        super.die();
+        setG(World.baseG);
+		isDeadNoDraw=true;
+    }
+
+//	@Override
+//	public void drawDeath(GL10 gl) {
+//		gl.glTranslatef(10,0,0);
+//		super.drawElement(gl);
+//		gl.glTranslatef(-10,0,0);
+//	}
+
+
+    void doubleCost(int max){
 		if(cost<max&&chancecost<max){
 			cost+=cost;
 			chancecost+=chancecost;
 		}
 	}
-	void init() {
+	protected void init() {
 		loadTexture();
 		loadSound(MusicId.magic);
 	}

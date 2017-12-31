@@ -243,10 +243,10 @@ public class MenuActivity extends Activity {
 		heroId=pos;
 //		changeSkin();
 		switch(pos){
-			case 0:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
-			case 1:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
-			case 2:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
-			case 3:			world.changePlayer(world.player.mapSign,world.player,world.gra,world.player.x,world.player.y);break;
+			case 0:			world.changePlayer(world.player.mapSign,world.player,world.grassSet,world.player.x,world.player.y);break;
+			case 1:			world.changePlayer(world.player.mapSign,world.player,world.grassSet,world.player.x,world.player.y);break;
+			case 2:			world.changePlayer(world.player.mapSign,world.player,world.grassSet,world.player.x,world.player.y);break;
+			case 3:			world.changePlayer(world.player.mapSign,world.player,world.grassSet,world.player.x,world.player.y);break;
 
 		}
 	}
@@ -846,7 +846,7 @@ public class MenuActivity extends Activity {
 	}
 
 	void changeSkin(final Object mapfile) {
-		final Creature c=new Creature(world.gra){
+		final Creature c=new Creature(world.grassSet){
 			boolean ziped=false;
 			public void drawElement(GL10 gl){
 				if(ziped)return;

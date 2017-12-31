@@ -2,6 +2,7 @@ package Mankind;
 
 import com.mingli.toms.MenuActivity;
 import com.mingli.toms.MusicId;
+import com.mingli.toms.R;
 import com.mingli.toms.Render;
 import com.mingli.toms.World;
 
@@ -52,7 +53,6 @@ public class Player extends BattleMan {
 //        speedMaxBack=10;
 //        		getxSpeedMax();
         initGuideTail(gra);     
-        reSetDownDate();
         attack=World.baseAttack;
         treadable=false;
     }
@@ -79,12 +79,6 @@ public class Player extends BattleMan {
 	        if(toukuiTime>0)this.changeToukui(0);
 	        if(gaoTime>0)this.changeGao(0);
 	}
-	private void reSetDownDate() {
-		// TODO Auto-generated method stub
-		for(int i=0;i<downData.length;i++){
-		downData[i]=false;
-		}
-	}
 
 	public void setEnemySet(EnemySet enemySet){
     	super.setEnemySet(enemySet);
@@ -102,7 +96,7 @@ public class Player extends BattleMan {
 //		   if(this.isBenti)
 		   {
 	        	for(Creature c:friendList){
-	        		if(c instanceof BattleMan&&((BattleMan) c).downData==this.downData
+	        		if(c instanceof BattleMan
 	        				&&!c.isDead){
 	        			float xx=c.x;float yy=c.y;
 	        			if(c!=this&&
@@ -238,7 +232,6 @@ public class Player extends BattleMan {
 		if(fallen){
 			downBodyLand(sitDown);
 		}else downBodyAir(sitDown);
-
 	}
 
 	private void downBodyAir(boolean sitDown) {
@@ -493,10 +486,9 @@ public class Player extends BattleMan {
 			          else if(getxPro()>Player.hx2)setxPro((float) (Player.hx2-Math.random()*Render.width));
 			          if(getyPro()<Player.hy1)setyPro((float) (Player.hy1+Render.height*Math.random()));
 			           else if(getyPro()>Player.hy2)setyPro((float) (Player.hy2-Render.height*Math.random()));
-			          if(isJumpAble()&&downData[3]) this.jump(jumpRate);
+			          if(isJumpAble()&&KEY_JUMP_DOWN) this.jump(jumpRate);
 			 }
 		};
-		p.downData=this.downData;//can be controlled same time
 		p.setEnemySet(enemySet);
 		p.setFriendSet(friendSet);
 //		p.goal=goal;
@@ -571,7 +563,7 @@ public class Player extends BattleMan {
     	
     	boolean anyOneAlive=false;
     	for(Creature c:friendList){
-        		if(c!=this&&c instanceof BattleMan&&((BattleMan) c).downData==this.downData
+        		if(c!=this&&c instanceof BattleMan
         				&&!c.isDead&&c.x>Player.gx1&&c.x<Player.gx2&&c.y>Player.gy1&&c.y<Player.gy2){
         			float xx=c.x;float yy=c.y;
         			c.setPosition(x, y);
@@ -682,12 +674,12 @@ public class Player extends BattleMan {
     void actCheck(Creature controller) {
     	super.actCheck(controller);
     	  downIndex++;
-        if (downData[3] && isJumpAble()) {
+        if (KEY_JUMP_DOWN && isJumpAble()) {
     		float jumpRate = culJumpRate();
 			jump(jumpRate);
 			controller.jump(jumpRate);
 		}
-        if(downData[6]){
+        if(KEY_TREAD_DOWN){
         	if (controller==this){        	
         		if(treader!=null) {
 					this.controller=treader;
@@ -695,8 +687,14 @@ public class Player extends BattleMan {
         	}else {
         		this.controller=this;
         	}
-        	downData[6]=false;
+        	KEY_TREAD_DOWN=false;
         }
+        if(KEY_UP_DOWN){
+        	downBody(true);
+		}
+		if(KEY_DOWN_DOWN){
+			downBody(false);
+		}
     }
 	
 	private float culJumpRate() {
@@ -748,7 +746,7 @@ public class Player extends BattleMan {
 					{
 						downActionMoved=false;
 						enemySet.treaded(this, c, attack);// not tread one much time
-						if(downData[3])jump(culJumpRate());
+						if(KEY_JUMP_DOWN)jump(culJumpRate());
 						else ySpeed=c.getySpeed()+11.5f;//128 de ping fang gen
 						return true;
 					}
@@ -933,16 +931,7 @@ public class Player extends BattleMan {
 
 
 	
-	public void CircleDown(float rad) {
-		// TODO Auto-generated method stub
-		 gunAngle = rad;
-        animationFinished=false;
-//		 setGunAngle(angle*180/3.14);// 
-	}
-	public void CircleUp() {
-		 gunAngle =_4;
-        animationFinished=(true);
-	}
+
 	public void haveBlade() {
 		super.haveBlade();
 		world.sendMessage(World.BLADEICON);
@@ -990,5 +979,53 @@ public class Player extends BattleMan {
         world.showLifeColumn(this);
     }
 	public void useItemOnline(String itemName) {}
-	
+	public void CircleDown(float rad,int dx,int dy) {
+		// TODO Auto-generated method stub
+		gunAngle = rad;
+		animationFinished=false;
+//		 setGunAngle(angle*180/3.14);//
+	}
+	public void CircleUp() {
+		gunAngle =_4;
+		animationFinished=(true);
+	}
+	public void CircleDown(float rad, int viewId,int dx,int dy) {
+		switch(viewId){
+			case R.id.circle1:CircleDown(rad,dx,dy);break;
+			case R.id.circleDirection:cirlceDownDirection(rad,dx,dy);break;
+		}
+	}
+	public void CircleUp(int viewId) {
+		switch(viewId){
+			case R.id.circle1:CircleUp();break;
+			case R.id.circleDirection:cirlceUpDirection();break;
+		}
+	}
+	 void cirlceUpDirection() {
+		KEY_LEFT_DOWN=false;
+		KEY_RIGHT_DOWN=false;
+		KEY_UP_DOWN=false;
+		KEY_DOWN_DOWN=false;
+	}
+	 void cirlceDownDirection(float rad, int dx, int dy) {
+		final int dl=5;
+		if(rad>=0&&rad<Math.PI/4||rad<=0&&rad>=-Math.PI/4){
+			KEY_RIGHT_DOWN=true;
+			KEY_LEFT_DOWN=false;
+			if(Math.abs(dx)>dl)doubleClicked=true;
+		}
+		else if(rad>Math.PI*3/4||rad<-Math.PI*3/4){
+			KEY_LEFT_DOWN=true;
+			KEY_RIGHT_DOWN=false;
+		}
+		else if(rad<0){
+			KEY_UP_DOWN=true;
+			KEY_DOWN_DOWN=false;
+		}
+		else if(rad>0){
+			KEY_DOWN_DOWN=true;
+			KEY_UP_DOWN=false;
+		}
+	}
+
 }

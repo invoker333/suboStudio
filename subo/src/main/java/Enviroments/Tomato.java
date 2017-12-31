@@ -14,8 +14,8 @@ public class Tomato extends ShakeFruit{
 	int bloodMax;//吃了增加的血量
 	int bloodStep=10;
 	int maxback;//to use Second Time
-	public Tomato(char bi,float x, float y,int bloodMax) {
-		super(bi,x,y);
+	public Tomato(char bi,GrassSet grassSet,float x, float y,int bloodMax) {
+		super(bi,grassSet, x,y);
 		if (bloodMax>1000)name="无限活力番茄！！";else 
 		name="活力番茄";
 		instruction="回复血量";
@@ -24,7 +24,7 @@ public class Tomato extends ShakeFruit{
 		maxback=bloodMax;
 		
 	}
-	void init(){
+	protected void init(){
 		loadSound(R.raw.fog);
 //		setFrameCount(2,1);
 //		if(bloodMax<1000)

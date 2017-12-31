@@ -20,7 +20,7 @@ public class FlagPlayerBlader extends PlayerBlader{
 		
 		haveBlade();
 		noGun();
-		downData[0]=true;
+		KEY_LEFT_DOWN=true;
 		realBlade.tail=new Tail(25,TexId.WIND);
 //		realBlade.setTextureId(TexId.QIGAN);
 		realBlade.angleStart =115;
@@ -34,14 +34,14 @@ public class FlagPlayerBlader extends PlayerBlader{
 	protected void tooRight() {
 		super.tooRight();
 //		setAnimationFinished(true);
-		downData[0]=true;
-		downData[1]=false;
+		KEY_LEFT_DOWN=true;
+		KEY_RIGHT_DOWN=false;
 	}
 	protected void tooLeft() {
 		super.tooLeft();
 //		setAnimationFinished(true);
-		downData[0]=false;
-		downData[1]=true;
+		KEY_LEFT_DOWN=false;
+		KEY_RIGHT_DOWN=true;
 	}
 //	public void drawElement(GL10 gl){
 //		super.drawElement(gl);

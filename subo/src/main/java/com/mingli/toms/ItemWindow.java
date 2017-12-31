@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import Enviroments.Fruit;
 import Enviroments.FruitSet;
+import Enviroments.GrassSet;
 import aid.Log;
 
 /**
@@ -50,11 +51,11 @@ public class ItemWindow {
 		}
 	};
 
-	ItemWindow(MenuActivity acti, SlidingDrawer sd,World world) {
+	ItemWindow(MenuActivity acti, SlidingDrawer sd, World world, GrassSet grassSet) {
 		this.acti = acti;
 		this.world = world;
 		this.sd=sd;
-		FruitSet.initItemList(acti.item);
+		FruitSet.initItemList(acti.item,grassSet );
 //		sd.setOnDrawerOpenListener(onDrawerOpenListener);
 	}
 

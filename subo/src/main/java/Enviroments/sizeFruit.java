@@ -10,10 +10,10 @@ import element2.TexId;
 
 public class sizeFruit extends Fruit{
 	public sizeFruit(){
-		this(' ',0,0);
+		this(' ',null,0,0);
 	}
-	public sizeFruit(char bi,float x, float y) {
-		super(bi,x,y);
+	public sizeFruit(char bi,GrassSet grassSet,float x, float y){
+		super(bi, grassSet, x, y);
 		name="变形瓜";
 		setGoodsCost(5, 0);
 		loadTexture(TexId.H);

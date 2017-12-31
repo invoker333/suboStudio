@@ -34,8 +34,8 @@ public class Goal extends RotateFruit{
 	Animation a;
 	public boolean hasFirstBlood=true;
 	public boolean showable=true;
-	Goal(char bi,float x,float y){
-		super(bi,x, y);
+	Goal(char bi,GrassSet grassSet, float x,float y){
+		super(bi,grassSet,x, y);
 		angleSpeed=0.2f;
 		float pickWidth=w*1.99f;
 		x1=x-pickWidth;
@@ -63,7 +63,7 @@ public class Goal extends RotateFruit{
 		a.setH(pickWidth);
 		a.loadTexture(TexId.GOALCIRCLE);
 	}
-	void init(){
+	protected void init(){
 		setW(64);
 		setH(64);
 		super.init();

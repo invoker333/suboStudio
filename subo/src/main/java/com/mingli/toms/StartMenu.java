@@ -345,7 +345,7 @@ public class StartMenu{
 				int count=10000;
 				acti.increaseChance(count);
 				acti.increaseCoin(count);
-				FruitSet.cml();
+				FruitSet.cml(null);
 				Toast.makeText(acti, "豪礼相送", Toast.LENGTH_SHORT).show();
 			
 			}else if(str.equals(editStr)){

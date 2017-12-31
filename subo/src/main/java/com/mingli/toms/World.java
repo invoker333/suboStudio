@@ -62,9 +62,10 @@ public class World extends GLSurfaceView implements Runnable {
 	public static boolean CAN_GO_NEXT_STAGE = true;
 	//	private static final int FILEMAP = -111;
 	public static long flash = 1000 / 60;
-	// public boolean isRunning;
+    public static float baseG=1;
+    // public boolean isRunning;
 	public Player player;
-	GrassSet gra;
+	GrassSet grassSet;
 	private EnemySet enemySet;
 	private EnemySet playerSet;
 	private BackGround bg;
@@ -169,7 +170,7 @@ public class World extends GLSurfaceView implements Runnable {
 
 //			Log.i(f.getName());
 
-			map.saveMap(gra.saveMap(), f);
+			map.saveMap(grassSet.saveMap(), f);
 			Toast.makeText(acti, "地图保存成功 地图名："+string+".txt", Toast.LENGTH_SHORT).show();
 		}
 	}
@@ -205,7 +206,7 @@ public class World extends GLSurfaceView implements Runnable {
 
 		Map map=new Map(-99,acti);
 		Log.i("-99MapData"+new String(map.charData));
-		GrassSet gs=new GrassSet(gra.getGrid(), map.charData, lightningSet, this);
+		GrassSet gs=new GrassSet(grassSet.getGrid(), map.charData, lightningSet, this);
 		
 		animationshopList=new ArrayList<Animation>();
 //	
@@ -333,29 +334,29 @@ public class World extends GLSurfaceView implements Runnable {
 		}
 		 if(editMode)mapName="编辑地图";////////
 		lightningSet = new LightningSet(2);// ����
-		gra = new GrassSet(64f, map.charData, lightningSet,this);
-		goal=gra.getGoal();
-		animationList=gra.animationList;
+		grassSet = new GrassSet(64f, map.charData, lightningSet,this);
+		goal= grassSet.getGoal();
+		animationList= grassSet.animationList;
 		
-		ps = new ParticleSet(gra, 10);
+		ps = new ParticleSet(grassSet, 10);
 		{
 			int id=mapIndex;
 			if(mapCharSet!=null)id=(int) (Math.random()*Map.max);//randombackground
 			bg = new BackGround(id);
 			
-			if(!gra.getGoal().showable)bg.setTextureId(TexId.TIANSHAN);
+			if(!grassSet.getGoal().showable)bg.setTextureId(TexId.TIANSHAN);
 			// bg = new BackGroundRoll(mapIndex);
 			// bg.setTextureId(TexId.ICE);
 			if (bg.getTextureId() == TexId.TIANSHAN)
-				snowSet = new SnowSet(20, gra);
+				snowSet = new SnowSet(20, grassSet);
 		}
 
-		enemySet = new EnemySet(gra);
+		enemySet = new EnemySet(grassSet);
 		if (RAMPAGE)
 			enemySet.setCHASE_MODEL(true);
-		player =gra.player;
+		player = grassSet.player;
 		if(mapCharSet!=null)player.flyTime=9999;
-		playerSet = new PlayerSet(gra, player);
+		playerSet = new PlayerSet(grassSet, player);
 		
 		enemySet.setPlayer(player);
 
@@ -369,8 +370,8 @@ public class World extends GLSurfaceView implements Runnable {
 //		playerSet.cList.add(player);
 		
 		
-		cs = new CoinSet(player, gra.getCoinList(), gra, this);
-		fruitSet = new FruitSet(player, gra.getFruitList(), this, gra);
+		cs = new CoinSet(player, grassSet.getCoinList(), grassSet, this);
+		fruitSet = new FruitSet(player, grassSet.getFruitList(), this, grassSet);
 		
 			
 			ArrayList<Creature>cList=new ArrayList<Creature>();
@@ -389,8 +390,8 @@ public class World extends GLSurfaceView implements Runnable {
 
 		
 
-		fireWorkSet = new FireworkSet(5, gra);
-		hikariSet = new HikariSet(10,gra.isCastle);
+		fireWorkSet = new FireworkSet(5, grassSet);
+		hikariSet = new HikariSet(10, grassSet.isCastle);
 
 		boomSet = new BoomSet(2);
 		lightSpotSet = new LightSpotSet(10, TexId.HIKARI);
@@ -427,7 +428,7 @@ public class World extends GLSurfaceView implements Runnable {
 		 if(bg!=null&&(bg.getTextureId()==TexId.DESERT))
 		drawList.add(lightSpotSet);
 		 
-		 drawList.add(gra);
+		 drawList.add(grassSet);
 		drawList.add(cs);
 		drawList.add(fruitSet);
 		drawList.add(ps);
@@ -547,7 +548,7 @@ public class World extends GLSurfaceView implements Runnable {
 //				||editMode
 				)return;
 		
-		if(gra!=null&&editMode)gra.toStartPosition();
+		if(grassSet !=null&&editMode) grassSet.toStartPosition();
 	
 		
 		if (player != null) {
@@ -605,7 +606,7 @@ public class World extends GLSurfaceView implements Runnable {
 			// double yf = Render.py + 720 * Math.random();
 			// boomSet.tringer(xf, yf);
 			// && fireWorkSet != nullfireWorkSet.tringer(xf, yf, 15, 20, 20);
-			// gra.newBendTail();
+			// grassSet.newBendTail();
 
 		}
 		if (player != null && guidePost != null	&&goal.hasFirstBlood) {
@@ -632,7 +633,7 @@ public class World extends GLSurfaceView implements Runnable {
 	private void tringerGuidePost() {
 		// TODO Auto-generated method stub
 		guidePost.tringer(Render.px + Render.width / 2, Render.py + Render.height *7/8,
-				gra.getGoal().x - guidePost.x, gra.getGoal().y - guidePost.y);
+				grassSet.getGoal().x - guidePost.x, grassSet.getGoal().y - guidePost.y);
 	}
 
 	private boolean isPlayerMoved(int index) {
@@ -889,7 +890,7 @@ public class World extends GLSurfaceView implements Runnable {
 	public void culStar() {
 		final int step = 3;
 		SPEEDSTAR = step * gameTime / timerMax;
-		// gra.goal.x
+		// grassSet.goal.x
 		COINSTAR = (int) (step * cs.getStar());
 		ITEMSTAR = (int) (step * fruitSet.getStar());
 		// Log.i("SPEEDSTAR"+SPEEDSTAR, "COINSTAR"+COINSTAR);
@@ -945,16 +946,16 @@ public class World extends GLSurfaceView implements Runnable {
 
 	public void astarSearch(float x, float y) {
 		if (astar == null)
-			astar = new AStar(gra.map, gra.getZero());
-		int sx = (int) (player.x / gra.getGrid());
-		int sy = (int) (player.y / gra.getGrid());
-		int tx = (int) (x / gra.getGrid());
-		int ty = (int) (y / gra.getGrid());
+			astar = new AStar(grassSet.map, grassSet.getZero());
+		int sx = (int) (player.x / grassSet.getGrid());
+		int sy = (int) (player.y / grassSet.getGrid());
+		int tx = (int) (x / grassSet.getGrid());
+		int ty = (int) (y / grassSet.getGrid());
 		astar.search(new Node(sx, sy, null), new Node(tx, ty, null));
 		Node goal = astar.goal;
 		while (goal != null) {
-			touchTail.tringer((goal.x + 0.5f) * gra.getGrid(), (goal.y + 0.5f)
-					* gra.getGrid());
+			touchTail.tringer((goal.x + 0.5f) * grassSet.getGrid(), (goal.y + 0.5f)
+					* grassSet.getGrid());
 			goal = goal.father;
 		}
 	}
@@ -969,8 +970,8 @@ public class World extends GLSurfaceView implements Runnable {
 		Animation cloneA=(Animation) a.clone();
 //			float xx=(float) ((Math.random()-0.4)*Render.width);
 //			float yy=(float)(((Math.random()-0.4))*Render.height);
-//			xx-=xx%gra.getGrid();
-//			yy-=yy%gra.getGrid();
+//			xx-=xx%grassSet.getGrid();
+//			yy-=yy%grassSet.getGrid();
 		
 		
 		cloneA.setStartXY(Render.px+Render.width/2, Render.py+Render.height/2);
@@ -1012,7 +1013,7 @@ public class World extends GLSurfaceView implements Runnable {
 	public void battleAction(String[] strSet) {
 		// TODO Auto-generated method stub
 		
-		battleActionCheck(strSet, gra.battleManList);
+		battleActionCheck(strSet, grassSet.battleManList);
 	}
 
 
@@ -1053,9 +1054,9 @@ public class World extends GLSurfaceView implements Runnable {
 		if(!drawList.isEmpty()){
 			BattleMan bm;
 			if(force_in_battle==force){
-				playerSet.addCreature(bm=new BattleMan(' ', gra, player.startX, player.startY,force, userId));
+				playerSet.addCreature(bm=new BattleMan(' ', grassSet, player.startX, player.startY,force, userId));
 			}else {
-				enemySet.addCreature(bm=new BattleMan(' ', gra, gra.getGrid()*gra.getMapWidth()
+				enemySet.addCreature(bm=new BattleMan(' ', grassSet, grassSet.getGrid()* grassSet.getMapWidth()
 						-player.startX, player.startY,force, userId));
 			}
 			bm.loadTexture();
@@ -1066,7 +1067,7 @@ public class World extends GLSurfaceView implements Runnable {
 		// TODO Auto-generated method stub
 		String[] strSet = strRes.split(" ");
 		int userId=Integer.parseInt(strSet[0]);
-		ArrayList<BattleMan> list = gra.battleManList;
+		ArrayList<BattleMan> list = grassSet.battleManList;
 		for(BattleMan bm:list){
 			if(bm.userId==userId){
 				bm.useItemOnline(strSet[1]);
@@ -1081,7 +1082,7 @@ public class World extends GLSurfaceView implements Runnable {
 			player.die();
 		}
 		
-		ArrayList<BattleMan> list = gra.battleManList;
+		ArrayList<BattleMan> list = grassSet.battleManList;
 		for(BattleMan bm:list){
 			if(bm.userId==userId){
 				bm.die();
@@ -1130,7 +1131,6 @@ public class World extends GLSurfaceView implements Runnable {
 //			player.realBlade.angle=agoPlayer.realBlade.angle;
 //			player.jump();
 			Log.i("agoPlayer.getDirection()"+agoPlayer.getDirection());
-			player.downData=agoPlayer.downData.clone();
 			player.setDirection(agoPlayer.getDirection());
 		}
 		if(playerSet!=null){

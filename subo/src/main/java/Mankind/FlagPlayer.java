@@ -12,7 +12,7 @@ public class FlagPlayer extends Player{
 		// TODO Auto-generated constructor stub
 		super(bi, grassSet,world, x, y);
 		setFlag();
-		downData[2]=true;
+		KEY_ATTACK_DOWN=true;
 		setPosition(x, y);
 	}
 	private void setFlag() {
@@ -21,7 +21,7 @@ public class FlagPlayer extends Player{
 		
 		haveBlade();
 		noGun();
-		downData[0]=true;
+		KEY_LEFT_DOWN=true;
 		realBlade.tail=new Tail(25,TexId.REDCREEPER);
 		realBlade.tail.setTextureId(TexId.FLAG);
 		realBlade.setTextureId(TexId.QIGAN);
@@ -35,14 +35,14 @@ public class FlagPlayer extends Player{
 	protected void tooRight() {
 		super.tooRight();
 //		setAnimationFinished(true);
-		downData[0]=true;
-		downData[1]=false;
+		KEY_LEFT_DOWN=true;
+		KEY_RIGHT_DOWN=false;
 	}
 	protected void tooLeft() {
 		super.tooLeft();
 //		setAnimationFinished(true);
-		downData[0]=false;
-		downData[1]=true;
+		KEY_LEFT_DOWN=false;
+		KEY_RIGHT_DOWN=true;
 	}
 //	public void drawElement(GL10 gl){
 //		super.drawElement(gl);

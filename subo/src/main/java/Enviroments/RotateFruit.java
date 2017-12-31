@@ -11,11 +11,14 @@ public class RotateFruit extends Fruit{
 	protected float angle;//起始位置
 	private float angleA=0.1f;
 
-	public RotateFruit(char bi,float x, float y){
-		super(bi,x, y);
+	public RotateFruit(char bi,GrassSet grassSet,float x, float y){
+		super(bi, grassSet, x, y);
 	}
 	
 	public void drawElement(GL10 gl){
+		move();
+		gravity();
+
 		gl.glEnable(GL10.GL_CULL_FACE);//背面裁剪
 
 		final float a=0.05f;
